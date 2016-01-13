@@ -1,4 +1,4 @@
-# HomeworkOfJikexueyuan
+# Homework Of Jikexueyuan
 <h4>
 该仓库保存极客学院web大前端就业办的作业，总共16周的作业。
 </h4>
