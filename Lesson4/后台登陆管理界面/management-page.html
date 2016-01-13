@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh" xml:lang="zh" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta content="text/html" charset="UTF-8" http-equiv="content-type">
+    <title>后台管理界面</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="management-page.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <a class="project-name" href="#">Project name</a>
+            <!-- 管理员头像 -->
+            <img src="082955428.jpg" class="img-circle" alt="adminlogo" id="adminlogo">
+            <!-- 头部右侧选项 -->
+            <ul class="nav navbar-nav navbar-right">
+                <li id="admin">
+                    <a href="#" class="navbar-font">
+                    Guofengrong
+                </a>
+                </li>
+                <li>
+                    <a href="#" class="navbar-font">账号设置</a>
+                </li>
+                <li>
+                    <a href="#" class="navbar-font">帮助</a>
+                </li>
+                <li>
+                    <a href="#" class="navbar-font">退出登陆</a>
+                </li>
+            </ul>
+        </div>
+        <div class="article">
+            <div class="middle">
+                <div class="inner">
+                    <!-- 当前所处页面标题 -->
+                    <h2 class="h2">用户管理
+                    <small>在此处可以查询用户信息</small>
+                </h2>
+                    <!-- 用户搜索框 -->
+                    <form class="form-inline" id="search-user">
+                        <div class="input-group form-group">
+                            <label class="sr-only" for="input-id">input-id</label>
+                            <div class="input-group">
+                                <div class="input-group-addon glyphicon glyphicon-search" id="search-user-logo"></div>
+                                <input type="text" class="form-control" id="input-id" placeholder="Username">
+                            </div>
+                        </div>
+                        <input type="submit" class="btn btn-primary" value="搜索">
+                    <!-- 用户情况表单 -->
+                    </form>
+                    <table class="table table-hover table-bordered" id="userlist">
+                        <thead>
+                            <tr>
+                                <td>序号</td>
+                                <td>账号</td>
+                                <td>真实姓名</td>
+                                <td>邮箱</td>
+                                <td>上次登录IP</td>
+                                <td>上次访问时间</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>zhangsan</td>
+                                <td>张三</td>
+                                <td>XXXXXXX@jikexueyuan.com</td>
+                                <td>XXX.XXX.XXX.XXX</td>
+                                <td>2015.08.26</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>lisi</td>
+                                <td>李四</td>
+                                <td>XXXXXXX@jikexueyuan.com</td>
+                                <td>XXX.XXX.XXX.XXX</td>
+                                <td>2015.08.26</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>wangwu</td>
+                                <td>王五</td>
+                                <td>XXXXXXX@jikexueyuan.com</td>
+                                <td>XXX.XXX.XXX.XXX</td>
+                                <td>2015.08.26</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>zhaoliu</td>
+                                <td>赵六</td>
+                                <td>XXXXXXX@jikexueyuan.com</td>
+                                <td>XXX.XXX.XXX.XXX</td>
+                                <td>2015.08.26</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>jay</td>
+                                <td>周杰伦</td>
+                                <td>XXXXXXX@jikexueyuan.com</td>
+                                <td>XXX.XXX.XXX.XXX</td>
+                                <td>2015.08.26</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>mayday</td>
+                                <td>五月天</td>
+                                <td>XXXXXXX@jikexueyuan.com</td>
+                                <td>XXX.XXX.XXX.XXX</td>
+                                <td>2015.08.26</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>雨神</td>
+                                <td>萧敬腾</td>
+                                <td>XXXXXXX@jikexueyuan.com</td>
+                                <td>XXX.XXX.XXX.XXX</td>
+                                <td>2015.08.26</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Lee-hom</td>
+                                <td>王力宏</td>
+                                <td>XXXXXXX@jikexueyuan.com</td>
+                                <td>XXX.XXX.XXX.XXX</td>
+                                <td>2015.08.26</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- 左侧导航条 -->
+            <div class="left">
+                <ul class="nav">
+                    <li>
+                        <a href="#">站点信息</a>
+                    </li>
+                    <li>
+                        <a href="#">注册与访问控制</a>
+                    </li>
+                    <li>
+                        <a href="#">站点功能</a>
+                    </li>
+                    <li>
+                        <a href="#">性能优化</a>
+                    </li>
+                    <li>
+                        <a href="#">域名设置</a>
+                    </li>
+                    <li>
+                        <a href="#">用户管理</a>
+                    </li>
+                    <li>
+                        <a href="#">用户权限</a>
+                    </li>
+                    <li>
+                        <a href="#">积分设置</a>
+                    </li>
+                    <li>
+                        <a href="#">上传设置</a>
+                    </li>
+                    <li>
+                        <a href="#">水印设置</a>
+                    </li>
+                    <li>
+                        <a href="#">附件类型尺寸</a>
+                    </li>
+                    <li>
+                        <a href="#">防灌水设置</a>
+                    </li>
+                    <li>
+                        <a href="#">时间设置</a>
+                    </li>
+                    <li>
+                        <a href="#">地区设置</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 页面尾部版权信息 -->
+        <div class="footer">
+            <p>copyright &copy; 2014-2015 XXXX公司版权所有</p>
+        </div>
+    </div>
+</body>
+
+</html>

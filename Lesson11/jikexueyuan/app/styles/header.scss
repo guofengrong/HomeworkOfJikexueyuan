@@ -1,0 +1,266 @@
+/*头部样式：
+1、.logo、.logo img设置网站logo样式；
+2、.search、.btn-search设置搜索框及按钮的样式；
+3、.login-box下包含了登陆后消息显示、用户名、用户名下拉菜单、我的课程等样式
+4、
+*/
+
+$niceGreen: #35b558;
+@mixin border($width:1px,$color:#e4e4e4) {
+    border: $width solid $color;
+}
+@mixin border-left($width:1px,$color:#e4e4e4) {
+    border-left: $width solid $color;
+}
+@mixin border-right($width:1px,$color:#e4e4e4) {
+    border-right: $width solid $color;
+}
+@mixin border-top($width:1px,$color:#e4e4e4) {
+    border-top: $width solid $color;
+}
+@mixin border-bottom($width:1px,$color:#e4e4e4) {
+    border-bottom: $width solid $color;
+}
+@mixin boxSize($boxWidth,$boxHeight) {
+    width: $boxWidth;
+    height: $boxHeight;
+}
+
+
+.header-wrapper {
+    position: relative;
+    @include boxSize(100%,50px);
+    padding: 10px 0 10px 0;
+}
+
+.header {
+    position: absolute;
+    left: 50%;
+    margin-left: -500px;
+    @include boxSize(1000px,50px);
+}
+
+.logo {
+    display: inline-block;
+    float: left;
+    cursor: pointer;
+    img {
+        @include boxSize(113px,auto);
+        margin-top: 5px;
+    }
+}
+
+.search {
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    margin-left: -189px;
+    box-sizing: border-box;
+    @include boxSize(380px,38px);
+    @include border();
+}
+
+.input-content {
+    float: left;
+    @include boxSize(310px,18px);
+    padding: 9px 15px;
+    border: 0;
+    outline: none;
+}
+
+.btn-search {
+    position: relative;
+    left: 0;
+    float: left;
+    box-sizing: border-box;
+    @include boxSize(38px,36px);
+    border: 0;
+    @include border-left(1px,#dfdfdf);
+    color: #6d6d6d;
+    font-size: 18px;
+    background-color: #ffffff;
+    cursor: pointer;
+    &:hover {
+        background: $niceGreen;
+        color: #ffffff;
+    }
+}
+
+.login-box {
+    position: relative;
+    float: right;
+    @include boxSize(211px,50px);
+    font-size: 12px;
+    color: #333;
+    display: inline-block;
+}
+
+.my-message {
+    float: left;
+    @include boxSize(12px,12px);
+    padding: 19px 0 19px 0;
+    display: inline-block;
+    color: #333;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.message-box-wrapper {
+    position: absolute;
+    top: 45px;
+    left: -52px;
+    @include boxSize(298px,178px);
+    @include border();
+    box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    cursor: pointer;
+    z-index: 800;
+    display: none;
+    h3 {
+        width: 268px;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 15px;
+        @include border-bottom();
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+}
+
+.message-box {
+    width: 298px;
+    height: 120px;
+    line-height: 120px;
+    background-color: #ffffff;
+    text-align: center;
+    a {
+        display: block;
+        width: 298px;
+        height: 120px;
+        line-height: 120px;
+        text-decoration: none;
+        color: #666;
+        text-align: center;
+    }
+}
+
+.top-icon {
+    position: absolute;
+    top: -8px;
+    left: 50px;
+    width: 15px;
+    height: auto;
+}
+
+.nonews-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -69.5px;
+    margin-top: -10px;
+    display: block;
+    width: 139px;
+    height: 20px;
+}
+
+.check-all-message {
+    display: block;
+    width: 298px;
+    height: 24px;
+    @include border-top();
+    text-align: center;
+    line-height: 25px;
+    color: #333;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.line1 {
+    float: left;
+    width: 0;
+    height: 12px;
+    @include border(1px,#333);
+    margin: 19px 5px 19px 5px;
+    display: inline-block;
+}
+
+.login-box-a {
+    float: left;
+    @include boxSize(50px,50px);
+    line-height: 50px;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    img {
+        position: relative;
+        top: -1px;
+        @include boxSize(40px,auto);
+        padding: 19px 0 19px 0;
+    }
+}
+
+.user-menu {
+    float: left;
+    @include boxSize(auto,50px);
+    line-height: 50px;
+    a {
+        position: relative;
+        top: 1px;
+        color: $niceGreen;
+        text-decoration: none;
+        font-size: 13px;
+    }
+    .icon-play3 {
+        position: relative;
+        display: inline-block;
+        transition: transform .5s;
+        -o-transisiton: transform .5s;
+        -moz-transisiton: transform .5s;
+        -webkit-transisiton: transform .5s;
+    }
+}
+
+.pull-down-menu {
+    position: absolute;
+    top: 40px;
+    left: 110px;
+    @include boxSize(92px,234px);
+    padding: 8px 0;
+    @include border();
+    background-color: #ffffff;
+    z-index: 800;
+    display: none;
+    img {
+        position: absolute;
+        top: -8px;
+        left: 38px;
+        @include boxSize(15px,auto);
+    }
+    ul {
+        list-style: none;
+    }
+    li {
+        @include boxSize(92px,26px);
+        line-height: 26px;
+        text-align: center;
+    }
+    a {
+        display: block;
+        @include boxSize(64px,26px);
+        padding: 0 14px;
+        font-size: 12px;
+        text-align: left;
+        text-decoration: none;
+        color: #666;
+        &:hover {
+            background-color: #e4e4e4;
+            color: $niceGreen;
+        }
+    }
+
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}

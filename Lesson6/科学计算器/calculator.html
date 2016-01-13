@@ -1,0 +1,572 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh" xml:lang="zh" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta content="text/html" charset="UTF-8" http-equiv="content-type">
+    <title>计算器</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        position: absolute;
+        left: 50%;
+        margin-left: -125px;
+        top: 50%;
+        margin-top: -175px;
+    }
+    
+    #view {
+        width: 250px;
+        background-color: #080808;
+        color: #ffffff;
+    }
+    
+    #result {
+        box-sizing: border-box;
+        padding: 10px;
+        width: 250px;
+        height: 100px;
+        text-align: right;
+        line-height: 100px;
+        background-color: transparent;
+        font-size: 25px;
+        color: #ffffff;
+    }
+    
+    .button_container {
+        box-sizing: border-box;
+        width: 250px;
+        height: 250px;
+    }
+    
+    .button_container button {
+        outline: none;
+    }
+    
+    .button1 {
+        display: inline-block;
+        float: left;
+        width: 50px;
+        height: 50px;
+        background-color: #f5923d;
+        border: 1px solid #8e8e8e;
+    }
+    
+    .button1:active {
+        background-color: #c27330;
+    }
+    
+    .button2 {
+        display: inline-block;
+        float: left;
+        width: 50px;
+        height: 50px;
+        background-color: #e0e0e0;
+        border: 1px solid #8e8e8e;
+    }
+    
+    .button2:active {
+        background-color: #b2b2b2;
+    }
+    
+    .button3 {
+        display: inline-block;
+        float: left;
+        width: 100px;
+        height: 50px;
+        background-color: #f5923d;
+        border: 1px solid #8e8e8e;
+    }
+    
+    .button3:active {
+        background-color: #c27330;
+    }
+    
+    #zero {
+        display: inline-block;
+        float: left;
+        width: 100px;
+        height: 50px;
+        background-color: #e0e0e0;
+        border: 1px solid #8e8e8e;
+    }
+    
+    #zero:active {
+        background-color: #b2b2b2;
+    }
+    
+    .inner {
+        color: #000000;
+        font-size: 20px;
+        line-height: 50px;
+    }
+    
+    .inner sup {
+        font-size: 10px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="view">
+            <p id="result">
+                0
+            </p>
+        </div>
+        <div class="button_container">
+            <button type="button" class="button1" id="ac" value="ac">
+                <p class="inner">
+                    AC
+                </p>
+            </button>
+            <button type="button" class="button1" id="oppsite" value="oppsite">
+                <p class="inner">
+                    +/-
+                </p>
+            </button>
+            <button type="button" class="button1" id="reciprocal" value="reciprocal">
+                <p class="inner">
+                    1/x
+                </p>
+            </button>
+            <button type="button" class="button1" id="division" value="division">
+                <p class="inner">
+                    &divide;
+                </p>
+            </button>
+            <button type="button" class="button1" id="sin" value="sin">
+                <p class="inner">
+                    sin
+                </p>
+            </button>
+            <button type="button" class="button2" id="seven" value="7">
+                <p class="inner">
+                    7
+                </p>
+            </button>
+            <button type="button" class="button2" id="eight" value="8">
+                <p class="inner">
+                    8
+                </p>
+            </button>
+            <button type="button" class="button2" id="nine" value="9">
+                <p class="inner">
+                    9
+                </p>
+            </button>
+            <button type="button" class="button1" id="multiplication" value="multiplication">
+                <p class="inner">
+                    x
+                </p>
+            </button>
+            <button type="button" class="button1" id="cos" value="cos">
+                <p class="inner">
+                    cos
+                </p>
+            </button>
+            <button type="button" class="button2" id="four" value="4">
+                <p class="inner">
+                    4
+                </p>
+            </button>
+            <button type="button" class="button2" id="five" value="5">
+                <p class="inner">
+                    5
+                </p>
+            </button>
+            <button type="button" class="button2" id="six" value="6">
+                <p class="inner">
+                    6
+                </p>
+            </button>
+            <button type="button" class="button1" id="subtraction" value="subtraction">
+                <p class="inner">
+                    —
+                </p>
+            </button>
+            <button type="button" class="button1" id="pow" value="pow">
+                <p class="inner">
+                    x
+                    <sup>
+                        2
+                    </sup>
+                </p>
+            </button>
+            <button type="button" class="button2" id="one" value="1">
+                <p class="inner">
+                    1
+                </p>
+            </button>
+            <button type="button" class="button2" id="two" value="2">
+                <p class="inner">
+                    2
+                </p>
+            </button>
+            <button type="button" class="button2" id="three" value="3">
+                <p class="inner">
+                    3
+                </p>
+            </button>
+            <button type="button" class="button1" id="addition" value="addition">
+                <p class="inner">
+                    +
+                </p>
+            </button>
+            <button type="button" class="button1" id="sqrt" value="sqrt">
+                <p class="inner">
+                    x
+                    <sup>1/2</sup>
+                </p>
+            </button>
+            <button type="button" class="button2" id="zero" value="0">
+                <p class="inner">
+                    0
+                </p>
+            </button>
+            <button type="button" class="button2" id="point" value=".">
+                <p class="inner">
+                    .
+                </p>
+            </button>
+            <button type="button" class="button3" id="equal" value="equal">
+                <p class="inner">
+                    =
+                </p>
+            </button>
+        </div>
+    </div>
+    <script type="text/javascript">
+    var a = [];
+    var num1, num2, temp, result, operatorLast;
+    result = 0;
+    var output = document.getElementById("result");
+    var numSeven = document.getElementById("seven");
+    var numEight = document.getElementById("eight");
+    var numNine = document.getElementById("nine");
+    var numFour = document.getElementById("four");
+    var numFive = document.getElementById("five");
+    var numSix = document.getElementById("six");
+    var numThree = document.getElementById("three");
+    var numTwo = document.getElementById("two");
+    var numOne = document.getElementById("one");
+    var numZero = document.getElementById("zero");
+    var numPoint = document.getElementById("point");
+    var oprtMultiplication = document.getElementById("multiplication");
+    var oprtAddition = document.getElementById("addition");
+    var oprtSubtraction = document.getElementById("subtraction");
+    var oprtDivision = document.getElementById("division");
+    var oprtAC = document.getElementById("ac");
+    var oprtEqual = document.getElementById("equal");
+    var oprtPow = document.getElementById("pow");
+    var oprtSqrt = document.getElementById("sqrt");
+    var oprtOppsite = document.getElementById("oppsite");
+    var oprtReciprocal = document.getElementById("reciprocal");
+    var oprtSin = document.getElementById("sin");
+    var oprtCos = document.getElementById("cos");
+
+
+    function calculate1(num1, num2) {
+        var tempResult = 0;
+        if (operatorLast == undefined) {
+            a = [];
+            tempResult = num1 + num2;
+        } else if (operatorLast == "multiplication") {
+            a = [];
+            tempResult = num1 * num2;
+        } else if (operatorLast == "addition") {
+            a = [];
+            tempResult = num1 + num2;
+        } else if (operatorLast == "subtraction") {
+            a = [];
+            tempResult = num1 - num2;
+        } else if (operatorLast == "division") {
+            a = [];
+            tempResult = num1 / num2;
+        } else if (operatorLast == "equal") {
+            a = [];
+            tempResult = num1;
+        }
+        return tempResult;
+    }
+
+    function resultOutput(result) {
+        var tempString = result.toString();
+        if (tempString.length <= 15) {
+            output.innerHTML = result;
+        } else {
+            output.innerHTML = (result).toPrecision(12);
+        }
+    }
+    numSeven.onclick = function(e) {
+        if (a.length >= 15) {
+            a = [];
+            output.innerHTML = "超出范围，重新输入";
+        } else {
+            a.push(numSeven.value);
+            output.innerHTML = a.join('');
+        }
+    };
+    numEight.onclick = function(e) {
+        if (a.length >= 15) {
+            a = [];
+            output.innerHTML = "超出范围，重新输入";
+        } else {
+            a.push(numEight.value);
+            output.innerHTML = a.join('');
+        }
+    };
+    numNine.onclick = function(e) {
+        if (a.length >= 15) {
+            a = [];
+            output.innerHTML = "超出范围，重新输入";
+        } else {
+            a.push(numNine.value);
+            output.innerHTML = a.join('');
+        }
+    };
+
+    numFour.onclick = function(e) {
+        if (a.length >= 15) {
+            a = [];
+            output.innerHTML = "超出范围，重新输入";
+        } else {
+            a.push(numFour.value);
+            output.innerHTML = a.join('');
+        }
+    };
+    numFive.onclick = function(e) {
+        if (a.length >= 15) {
+            a = [];
+            output.innerHTML = "超出范围，重新输入";
+        } else {
+            a.push(numFive.value);
+            output.innerHTML = a.join('');
+        }
+    };
+
+    numSix.onclick = function(e) {
+        if (a.length >= 15) {
+            a = [];
+            output.innerHTML = "超出范围，重新输入";
+        } else {
+            a.push(numSix.value);
+            output.innerHTML = a.join('');
+        }
+    };
+
+    numThree.onclick = function(e) {
+        if (a.length >= 15) {
+            a = [];
+            output.innerHTML = "超出范围，重新输入";
+        } else {
+            a.push(numThree.value);
+            output.innerHTML = a.join('');
+        }
+    };
+
+    numTwo.onclick = function(e) {
+        if (a.length >= 15) {
+            a = [];
+            output.innerHTML = "超出范围，重新输入";
+        } else {
+            a.push(numTwo.value);
+            output.innerHTML = a.join('');
+        }
+    };
+
+    numOne.onclick = function(e) {
+        if (a.length >= 15) {
+            a = [];
+            output.innerHTML = "超出范围，重新输入";
+        } else {
+            a.push(numOne.value);
+            output.innerHTML = a.join('');
+        }
+    };
+
+    numZero.onclick = function(e) {
+        if (a.length >= 15) {
+            a = [];
+            output.innerHTML = "超出范围，重新输入";
+        } else {
+            a.push(numZero.value);
+            output.innerHTML = a.join('');
+        }
+    };
+
+    numPoint.onclick = function(e) {
+        a.push(numPoint.value);
+        output.innerHTML = a.join('');
+    };
+
+    oprtMultiplication.onclick = function(e) {
+        num1 = result;
+        num2 = a.join('') - 0;
+        result = calculate1(num1, num2);
+        operatorLast = oprtMultiplication.value;
+        resultOutput(result);
+    };
+
+    oprtAddition.onclick = function(e) {
+        num1 = result;
+        num2 = a.join('') - 0;
+        result = calculate1(num1, num2);
+        operatorLast = oprtAddition.value;
+        resultOutput(result);
+
+    };
+
+    oprtSubtraction.onclick = function(e) {
+        num1 = result;
+        num2 = a.join('') - 0;
+        result = calculate1(num1, num2);
+        operatorLast = oprtSubtraction.value;
+        resultOutput(result);
+    };
+
+    oprtDivision.onclick = function(e) {
+        num1 = result;
+        num2 = a.join('') - 0;
+        result = calculate1(num1, num2);
+        operatorLast = oprtDivision.value;
+        resultOutput(result);
+    };
+
+    oprtAC.onclick = function(e) {
+        num1 = 0;
+        num2 = 0;
+        result = 0;
+        a = [];
+        operatorLast = undefined;
+        output.innerHTML = result;
+    };
+
+    oprtEqual.onclick = function(e) {
+        num1 = result;
+        num2 = a.join('') - 0;
+        result = calculate1(num1, num2);
+        operatorLast = oprtEqual.value;
+        resultOutput(result);
+    };
+
+    oprtPow.onclick = function(e) {
+        if (operatorLast == undefined) {
+            if (a.length != 0) {
+                result = Math.pow(a.join('') - 0, 2);
+                a = [];
+            } else if (a.length == 0) {
+                result = Math.pow(result, 2);
+            }
+            resultOutput(result);
+        } else {
+            num1 = result;
+            num2 = a.join('') - 0;
+            temp = calculate1(num1, num2);
+            result = Math.pow(temp, 2);
+            operatorLast = undefined;
+            resultOutput(result);
+        }
+    };
+
+    oprtSqrt.onclick = function(e) {
+        if (operatorLast == undefined) {
+            if (a.length != 0) {
+                result = Math.sqrt(a.join('') - 0);
+                a = [];
+            } else if (a.length == 0) {
+                result = Math.sqrt(result);
+            }
+            resultOutput(result);
+        } else {
+            num1 = result;
+            num2 = a.join('') - 0;
+            temp = calculate1(num1, num2);
+            result = Math.sqrt(temp);
+            operatorLast = undefined;
+            resultOutput(result);
+        }
+    };
+
+    oprtOppsite.onclick = function(e) {
+        if (operatorLast == undefined) {
+            if (a.length != 0) {
+                result = (a.join('') - 0) * (-1);
+                a = [];
+            } else if (a.length == 0) {
+                result = (a.join('') - 0) * (-1);
+            }
+            resultOutput(result);
+        } else {
+            num1 = result;
+            num2 = a.join('') - 0;
+            temp = calculate1(num1, num2);
+            result = (a.join('') - 0) * (-1);
+            operatorLast = undefined;
+            resultOutput(result);
+        }
+    };
+
+    oprtReciprocal.onclick = function(e) {
+        if (operatorLast == undefined) {
+            if (a.length != 0) {
+                result = 1 / (a.join('') - 0);
+                a = [];
+            } else if (a.length == 0) {
+                result = 1 / result;
+            }
+            resultOutput(result);
+        } else {
+            num1 = result;
+            num2 = a.join('') - 0;
+            temp = calculate1(num1, num2);
+            result = 1 / temp;
+            operatorLast = undefined;
+            resultOutput(result);
+        }
+    };
+
+    oprtSin.onclick = function(e) {
+        if (operatorLast == undefined) {
+            if (a.length != 0) {
+                result = Math.sin(a.join('') - 0);
+                a = [];
+            } else if (a.length == 0) {
+                result = Math.sin(result);
+            }
+            resultOutput(result);
+        } else {
+            num1 = result;
+            num2 = a.join('') - 0;
+            temp = calculate1(num1, num2);
+            result = Math.sin(temp);
+            operatorLast = undefined;
+            resultOutput(result);
+        }
+    };
+
+    oprtCos.onclick = function(e) {
+        if (operatorLast == undefined) {
+            if (a.length != 0) {
+                result = Math.cos(a.join('') - 0);
+                a = [];
+            } else if (a.length == 0) {
+                result = Math.cos(result);
+            }
+            resultOutput(result);
+        } else {
+            num1 = result;
+            num2 = a.join('') - 0;
+            temp = calculate1(num1, num2);
+            result = Math.cos(temp);
+            operatorLast = undefined;
+            resultOutput(result);
+        }
+    };
+    </script>
+</body>
+
+</html>

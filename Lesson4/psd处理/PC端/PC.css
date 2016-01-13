@@ -1,0 +1,473 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*外部容器样式*/
+
+.container {
+    width: 100%;
+    background-color: #ffffff;
+    min-width: 990px;
+}
+
+
+/*头部样式*/
+
+.header {
+    width: 100%;
+    height: 80px;
+    background-image: url("导航背景颜色.png");
+    background-size: cover;
+}
+
+
+/*头部容器样式*/
+
+.header-wrapper {
+    width: 990px;
+    height: 100%;
+    position: relative;
+    left: 50%;
+    margin-left: -495px;
+}
+
+
+/*页面logo样式*/
+
+.header-wrapper .web-logo {
+    float: left;
+    width: 71px;
+    position: relative;
+    top: 40px;
+    margin-top: -30px;
+}
+
+
+/*导航栏样式*/
+
+.nav {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    margin-top: -17px;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav ul li {
+    float: left;
+    width: 107px;
+    height: 35px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 35px;
+}
+
+.nav ul li a {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav ul li:hover {
+    background-color: #9cca34;
+    border-radius: 35px;
+}
+
+
+/*头部与横幅间线条样式*/
+
+.line {
+    width: 100%;
+    height: 0;
+    border: 1px solid #9c9b9b;
+    position: relative;
+    top: -1px;
+}
+
+
+/*横幅及登陆框样式*/
+
+.banner {
+    background: url("底色.png");
+}
+
+.banner-wrapper {
+    width: 990px;
+    height: 560px;
+    position: relative;
+    left: 50%;
+    margin-left: -495px;
+    background: url("16素材16sucai.com_1.png");
+    background-repeat: no-repeat;
+}
+
+
+/*登陆框背景样式*/
+
+.log-in-background {
+    width: 306px;
+    height: 340px;
+    background-color: #817f85;
+    opacity: 0.4;
+    border-radius: 10px;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    margin-right: 40px;
+}
+
+
+/*登陆框容器样式*/
+
+.log-in {
+    width: 306px;
+    height: 340px;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    margin-right: 40px;
+}
+
+
+/*登陆框标题样式*/
+
+.log-in-title {
+    height: 60px;
+    font-size: 18px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.log-in-title p {
+    color: #ffffff;
+}
+
+
+/*登陆框标题与输入框之间线条样式*/
+
+.log-in-title .line {
+    background: url("登录线.png");
+    position: relative;
+    left: 50%;
+    margin-left: -35%;
+    width: 70%;
+    height: 0;
+    border: 1px solid #ffffff;
+    border-radius: 100px;
+}
+
+
+/*输入框样式*/
+
+.user {
+    display: block;
+    width: 205px;
+    height: 29px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    position: relative;
+    left: 50%;
+    margin-left: -107px;
+    margin-top: 20px;
+    border: 0;
+    padding: 5px 0 5px 10px;
+}
+
+.password {
+    display: block;
+    width: 205px;
+    height: 29px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    position: relative;
+    left: 50%;
+    margin-left: -107px;
+    margin-top: 20px;
+    border: 0;
+    padding: 5px 0 5px 10px;
+}
+
+
+/*验证码样式*/
+
+.verification-code {
+    display: inline-block;
+    width: 68px;
+    height: 29px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    position: relative;
+    left: 46px;
+    top: -10px;
+    border: 0;
+    padding: 5px 0 5px 10px;
+}
+
+.verification-code-photo {
+    display: inline-block;
+    margin-top: 20px;
+    position: relative;
+    left: 46px;
+    top: 5px;
+}
+
+.log-in .change {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 12px;
+    position: relative;
+    left: 46px;
+    top: -10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*登录按钮样式*/
+
+.log-in button {
+    width: 116px;
+    height: 38px;
+    background: url("登录框.png");
+    position: relative;
+    border: 0;
+    margin-top: 10px;
+    left: 46px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.log-in .register {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    left: 190px;
+    top: -25px;
+}
+
+
+/*公告栏样式*/
+
+.ren {
+    background-color: #ffffff;
+}
+
+.ren-wrapper {
+    width: 990px;
+    height: 80px;
+    position: relative;
+    left: 50%;
+    margin-left: -495px;
+}
+
+.ren-wrapper img {
+    position: relative;
+    top: 5px;
+}
+
+.ren-wrapper h6 {
+    font-size: 15px;
+}
+
+.ren-wrapper h6 span {
+    color: #9cca34;
+}
+
+.ren-wrapper p {
+    text-align: center;
+    font-size: 34px;
+    color: #9b9b9b;
+    margin: 20px 0 20px 0;
+}
+
+.ren-wrapper p i {
+    font-size: 44px;
+    color: #9cca34;
+    ;
+}
+
+
+/*功能模块样式*/
+
+.content {
+    margin-top: 30px;
+}
+
+
+/*功能模块部分容器样式*/
+
+.content-wrapper {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+
+/*标题样式*/
+
+.title {
+    width: 100%;
+    height: 111px;
+    line-height: 50px;
+}
+
+.title h2 {
+    width: 100%;
+    background-color: #d2d2d2;
+    text-align: center;
+    font-size: 30px;
+    color: #7b7b7c;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, .75);
+}
+
+.title h5 {
+    width: 100%;
+    background-color: #d2d2d2;
+    text-align: center;
+    color: #7b7b7c;
+    font-size: 15px;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, .75);
+    margin-top: -10px;
+}
+
+
+/*模块容器样式*/
+
+.module {
+    width: 990px;
+    height: 980px;
+    /*box-sizing: border-box;*/
+    position: relative;
+    left: 50%;
+    margin-left: -495px;
+    margin-top: -21px;
+    background-color: #ffffff;
+}
+
+
+/*单个模块图标容器样式*/
+
+.module .box {
+    width: 196px;
+    height: 194px;
+    float: left;
+    background-color: #e4e4e4;
+    margin: 1px;
+}
+
+
+/*单个模块图标样式*/
+
+.modulelogo {
+    position: relative;
+    left: 50%;
+    margin-left: -29px;
+    margin-top: 40px;
+}
+
+
+/*模块图标下文字样式*/
+
+.module h5 {
+    font-size: 14px;
+    color: #4c4e52;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.module h6 {
+    font-size: 12px;
+    color: #a6a6a7;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/*精品案例样式*/
+
+.content2 {
+    width: 100%;
+    background-color: #eaeaea;
+}
+
+.content-wrapper {
+    width: 100%;
+}
+
+.content2 img {
+    position: relative;
+    left: 50%;
+    margin-left: -495px;
+    width: 990px;
+    height: 307px;
+    margin-top: -20px;
+}
+
+
+/*页面尾部样式*/
+
+.footer {
+    width: 100%;
+    height: 150px;
+    background-color: #18365a;
+}
+
+.footer-wrapper {
+    width: 990px;
+    height: 100%;
+    position: relative;
+    left: 50%;
+    margin-left: -495px;
+}
+
+
+/*页面尾部logo样式*/
+
+.footer-wrapper .web-logo {
+    width: 71px;
+    position: relative;
+    top: 50px;
+}
+
+
+/*联系我们样式*/
+
+.contact-us {
+    position: absolute;
+    right: 0;
+    top: 50px;
+}
+
+.contact-us .about-us {
+    height: 24px;
+    position: absolute;
+}
+
+.contact-us a {
+    font-size: 12px;
+    color: #fff;
+    line-height: 24px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.contact-us .address {
+    height: 24px;
+    position: relative;
+    top: 24px;
+}
+
+.contact-us .address span {
+    font-size: 12px;
+    color: #fff;
+    line-height: 24px;
+    display: block;
+}

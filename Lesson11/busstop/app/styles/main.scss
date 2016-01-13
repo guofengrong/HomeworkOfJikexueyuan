@@ -1,0 +1,187 @@
+@mixin boxSize($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+//声明变量及定义函数片段
+$mainWrapperBGColor: #e1e1e1;
+$mainBGColor: #35b558;
+$stopNameBGColor: #ff0000;
+$stopBoardBGColor: #ffffff;
+$boardHeaderBGColor: transparent;
+$busNumberBGColor: transparent;
+$directionLineColor: #008000;
+
+/*作业及目标的外层包裹*/
+.header-wrapper {
+    margin-top: 50px;
+    @include boxSize(auto, auto);
+}
+
+/*外层包裹*/
+.main-wrapper {
+    position: relative;
+    margin: 10px auto;
+    @include boxSize(800px, 800px);
+    border-radius: 10px;
+    background-color: $mainWrapperBGColor;
+}
+
+.main {
+    box-sizing: border-box;
+    position: relative;
+    padding: 0 15px;
+    top: 10px;
+    left: 145px;
+    @include boxSize(510px, 750px);
+    border: 1px solid #333;
+    border-radius: 10px;
+    background-color: $mainBGColor;
+    box-shadow: 1px 1px 1px 1px #333;
+}
+
+/*当前公交车站的站名样式*/
+.stop-name {
+    margin: 15px auto;
+    font-size: 20px;
+    @include boxSize(100px, 40px);
+    line-height: 40px;
+    background-color: $stopNameBGColor;
+    color: #ffffff;
+}
+
+/*所有站牌的外层包裹*/
+.stopboard-wrapper {
+    @include boxSize(480px, 200px);
+    margin-top: 10px;
+    border: 1px solid #e4e4e4;
+    background-color: $stopBoardBGColor;
+    border-radius: 10px;
+
+}
+
+/*站牌顶部的信息样式，包含了公交线路，公交终点站及始末班车时间的样式设置*/
+.board-header {
+    @include boxSize(480px, 100px);
+    background-color: $boardHeaderBGColor;
+    border-radius: 10px;
+    .bus-number {
+        @include boxSize(100px, 100px);
+        float: left;
+        background-color: $busNumberBGColor;
+        font-size: 60px;
+        line-height: 100px;
+        font-weight: bold;
+        text-align: center;
+        color: #ff0000;
+        border-radius: 10px;
+    }
+    .terminus {
+        float: left;
+        @include boxSize(180px, 100px);
+        line-height: 100px;
+        small {
+            font-size: 20px;
+        }
+        strong {
+            font-size: 30px;
+        }
+    }
+    .bus-time {
+        position: relative;
+        box-sizing: border-box;
+        @include boxSize(200px,100px);
+        float: left;
+        line-height: 100px;
+        padding-top: 20px;
+        display: flex;
+        display: -webkit-flex;
+        ul {
+            float: left;
+            margin-left: 15px;
+            flex-wrap: nowrap;
+            -webkit-flex-wrap: nowrap;
+            li {
+                list-style: none;
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+/*站点信息的外层包裹。其下包含了下一站、所有站点列表的样式设置*/
+.stop-info-wrapper {
+    position: relative;
+    @include boxSize(480px,100px);
+    .next-stop {
+        float: left;
+        @include boxSize(100px,100px);
+        text-align: center;
+        line-height: 100px;
+        h2 {
+            margin: 0;
+            font-size: 20px;
+            color: #ff0000;
+        }
+        h4 {
+            margin: 0;
+            font-size: 14px;
+        }
+    }
+    .stop-list {
+        float: left;
+        @include boxSize(380px, 80px);
+        ul {
+            margin: 0;
+            display: flex;
+            display: -webkit-flex;
+            display: -o-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            li {
+                flex-grow: 1;
+                -webkit-flex-grow: 1;
+                -o-flex-grow: 1;
+                -moz-flex-grow: 1;
+                -ms-flex-grow: 1;
+                list-style: none;
+                font-size: 14px;
+                span {
+                    display: block;
+                    @include boxSize(10px, auto);
+                }
+            }
+        }
+    }
+}
+
+/*设置行驶方向的箭头标识的样式*/
+.direction-wrapper {
+    float: left;
+    @include boxSize(380px, 20px);
+    p {
+        float: left;
+    }
+    .direction {
+        float: left;
+        margin-top: 5px;
+        .direction-line {
+            position: relative;
+            display: inline-block;
+            @include boxSize(210px, 3.33333px);
+            float: left;
+            top: 3.33333px;
+            background-color: $directionLineColor;
+        }
+        .direction-arrow {
+            position: relative;
+            display: inline-block;
+            @include boxSize(0, 0);
+            float: left;
+            border-top: 5px solid transparent;
+            border-left: 20px solid $directionLineColor;
+            border-right: 0px solid transparent;
+            border-bottom: 5px solid transparent;
+        }
+    }
+}

@@ -1,0 +1,256 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+/*页面最外层容器*/
+
+.container {
+    position: relative;
+    min-width: 980px;
+    height: 100%;
+}
+
+
+/*头部样式：
+1、header-wrapper是头部的外层包裹；
+2、header主要用于设置header水平居中的样式；
+3、logo、header-nav及ul、li分别设置百度logo和导航选项的样式；
+4、h-now-click用于设置header导航条被选中标签的样式；
+5、input-content、search-btn用于设置输入框及按钮的样式；
+*/
+
+.header-wrapper {
+    position: relative;
+    width: 100%;
+    height: 88px;
+}
+
+.header {
+    position: relative;
+    left: 50%;
+    margin-left: -490px;
+    width: 980px;
+    height: 88px;
+}
+
+.logo {
+    position: relative;
+    float: left;
+    display: inline-block;
+    margin: 6px 20px 0 0;
+}
+
+.header-nav ul,
+li {
+    float: left;
+    list-style: none;
+}
+
+.h-nav-li a {
+    display: inline-block;
+    width: 28px;
+    height: 30px;
+    margin: 22px 10px 0 0;
+    font-size: 14px;
+    color: #2b66b4;
+    line-height: 30px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#h-now-click {
+    color: #333;
+    text-decoration: none;
+}
+
+.input-content {
+    position: relative;
+    display: inline-block;
+    float: left;
+    box-sizing: border-box;
+    width: 533px;
+    height: 30px;
+    border: 1px solid #cdcdcd;
+    margin-right: 10px;
+    outline: none;
+    background-color: #ffffff;
+    padding: 5px 0 5px 7px;
+}
+
+.search-btn {
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 95px;
+    height: 30px;
+    border: 1px solid #333;
+    background: #e9e9e9;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+
+/*图片类型选择导航条样式：
+1、.banner-wrapper是外层包裹；
+2、.banner主要用于使banner实现水平居中的效果
+3、.ul、li、b-now-click用于设置导航条及标签被选中时的样式
+*/
+
+.banner-wrapper {
+    position: relative;
+    width: 100%;
+    height: 38px;
+}
+
+.banner {
+    position: absolute;
+    /*left: 50%;
+    margin-left: -490px;*/
+    height: 53px;
+    width: 100%;
+}
+
+.banner ul,
+li {
+    float: left;
+    list-style: none;
+}
+
+.banner-ul {
+    width: 100%;
+    height: 38px;
+    margin-top: 15px;
+    background-color: #3e4452;
+}
+
+.banner-li {
+    width: 60px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    cursor: pointer;
+}
+
+.banner-li a {
+    display: inline-block;
+    width: 60px;
+    height: 38px;
+    color: #ffffff;
+}
+
+#b-now-click {
+    background-color: #f80;
+}
+
+
+/*图片显示区域样式：
+1、.content-wrapper是外层包裹；
+2、.content主要用于使图片显示区域实现水平居中的效果；
+3、.pic-box、pic及img标签主要用于设置单张图片的样式包括外边距、边框、阴影等样式；
+*/
+
+
+/*@media only screen and (max-width: 1150px) {
+    .content-wrapper {
+        position: relative;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .content {
+        position: absolute;
+        left: 50%;
+        margin-left: -490px;
+        width: 980px;
+    }
+}
+
+@media only screen and (min-width: 1160px) and (max-width: 1398px){
+        .content-wrapper {
+        position: relative;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .content {
+        position: absolute;
+        left: 50%;
+        margin-left: -625px;
+        width: 1250px;
+    }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1631px){
+        .content-wrapper {
+        position: relative;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .content {
+        position: absolute;
+        left: 50%;
+        margin-left: -750px;
+        width: 1500px;
+    }
+}*/
+
+.content-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.content {
+    position: absolute;
+    left: 50%;
+    margin-left: -490px;
+    width: 980px;
+}
+
+.pic-box {
+    position: relative;
+    float: left;
+}
+
+.pic {
+    margin: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.pic img {
+    display: inline-block;
+    width: 233px;
+    height: auto;
+}
+
+
+/*回到顶部按钮样式*/
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+
+#back-to-top i {
+    display: inline-block;
+    font-size: 50px;
+    color: #e9e9e9;
+    cursor: pointer;
+}
+
+#back-to-top i:hover {
+    color: #38f;
+}

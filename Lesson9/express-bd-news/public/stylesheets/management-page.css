@@ -1,0 +1,376 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        font-family: "Microsoft YaHei";
+    }
+    /*外部容器样式*/
+    
+    .container {
+        min-width: 1080px;
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    /*确认删除界面样式设置*/
+    
+    .masking {
+        display: none;
+        position: absolute;
+        z-index: 800;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100%;
+        width: 100%;
+    }
+    
+    .success-page {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -125px;
+        width: 250px;
+        height: 100px;
+        line-height: 100px;
+        color: #333;
+        background-color: #ffffff;
+        font-size: 16px;
+        text-align: center;
+        z-index: 500;
+    }
+    
+    #success-close {
+        position: absolute;
+        top: -35px;
+        right: 10px;
+        font-size: 14px;
+        color: #e4e4e4;
+        cursor: pointer;
+    }
+    
+    .confirm-delete {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -75px;
+        margin-left: -150px;
+        width: 300px;
+        height: 150px;
+        background-color: #ffffff;
+        font-size: 16px;
+        color: #333;
+    }
+    
+    .close {
+        position: absolute;
+        right: 0;
+        margin-top: 10px;
+        margin-right: 10px;
+        display: inline-block;
+        height: 12px;
+        color: #e4e4e4;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    
+    .confirm-delete p {
+        margin-top: 30px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+    #delete {
+        margin-right: 10px;
+    }
+    /*页面头部样式*/
+    
+    .update-wrapper {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -250px;
+        margin-left: -250px;
+        width: 700px;
+        height: 500px;
+        background-color: #ffffff;
+        font-size: 16px;
+        color: #333;
+    }
+    
+    .update-content {
+        margin-top: 50px;
+        margin-left: 20px;
+    }
+    
+    .update-content p {
+        margin-bottom: 10px;
+    }
+    
+    #update-label {
+        position: relative;
+        top: -135px;
+    }
+    
+    #update-newscontent {
+        border-radius: 5px;
+        width: 300px;
+        height: 150px;
+        border: 1px solid #333;
+    }
+    
+    .head {
+        position: relative;
+        background-color: #3385ff;
+        height: 50px;
+        width: 100%;
+        min-width: 1080px;
+    }
+    /*头部左侧页面logo样式*/
+    
+    .project-name {
+        display: block;
+        color: #ffffff;
+        font-size: 18px;
+        padding: 15px;
+        line-height: 18px;
+        float: left;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    /*.project-name:hover {
+        color: #ffffff;
+        text-decoration: none;
+    }*/
+    /*针对forefox的hack*/
+    
+    @-moz-document url-prefix() {
+        a:focus {
+            outline: none;
+        }
+    }
+    /*头部导航条的样式*/
+    
+    .nav-ul {
+        position: relative;
+        float: right;
+        list-style: none;
+        color: #ffffff;
+    }
+    
+    .nav-li {
+        float: left;
+    }
+    
+    .nav-li-a {
+        display: inline-block;
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+    }
+    
+    .nav-li-a:hover {
+        background-color: #e4e4e4;
+        color: #3385ff;
+        text-decoration: none;
+    }
+    /*用户头像样式*/
+    
+    .user-img {
+        display: inline-block;
+        float: left;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+    }
+    /*页面主体样式*/
+    
+    .article {
+        position: relative;
+        background-color: #ffffff;
+        /*height: 100%;*/
+        min-width: 1080px;
+        overflow: auto;
+        display: flex;
+    }
+    /*主体部分左侧样式*/
+    
+    .article .left {
+        position: relative;
+        background-color: #f5f5f5;
+        float: left;
+        width: 200px;
+        height: 600px;
+    }
+    
+    .sidebar {
+        list-style: none;
+        /*height: 100%;*/
+    }
+    
+    .btn-sidebar {
+        line-height: 30px;
+        text-align: left;
+    }
+    
+    .btn-sidebar a {
+        display: inline-block;
+        width: 180px;
+        height: 30px;
+        padding-left: 20px;
+        color: #333;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    /*被点选中时的样式*/
+    
+    .click {
+        background-color: #e4e4e4;
+    }
+    /*未被选中时的样式*/
+    
+    .normal {
+        background-color: transparent;
+    }
+    /*未被选中时当鼠标经过时的样式*/
+    
+    .normal:hover {
+        background-color: #eee;
+    }
+    /*主体部分中间样式*/
+    
+    .article .middle {
+        background-color: #ffffff;
+        float: left;
+        height: 600px;
+        overflow-y: scroll;
+        flex-grow: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-grow: 1;
+        -o-flex-grow: 1;
+        -moz-flex-grow: 1;
+    }
+    /*新闻展示标签样式设置*/
+    
+    .news-list-wrapper {
+        display: flex;
+    }
+    /*展示表单样式设置*/
+    
+    .table {
+        margin-left: 20px;
+        margin-top: 20px;
+        /*border: 1px solid #333;*/
+        /*overflow: hidden;*/
+        border-collapse: collapse;
+        padding: 5px;
+    }
+    /*表单中单元的样式设置*/
+    
+    td {
+        border: 1px solid #333;
+        cellpadding: 10;
+        text-align: center;
+        padding: 5px;
+    }
+    
+    .news-content {
+        position: relative;
+        height: 100px;
+        width: 300px;
+        /*white-space: normal;*/
+        text-overflow: ellipsis;
+        /*white-space:nowrap;*/
+        overflow: auto;
+    }
+    
+    .btn-update,
+    .btn-delete {
+        margin-bottom: 10px;
+    }
+    /*当前所在页面标题样式*/
+    
+    .h2 {
+        margin-left: 60px;
+    }
+    
+    small {
+        font-size: 14px;
+        color: #b8b8b8;
+    }
+    /*表单及其子元素样式设置*/
+    
+    #input-news-info {
+        position: relative;
+        margin: 20px 0 10px 60px;
+    }
+    
+    #input-news-info p {
+        margin-bottom: 20px;
+    }
+    
+    #input-news-info input,
+    textarea {
+        outline: none;
+    }
+    /*新闻其他信息的输入框样式设置*/
+    
+    .btn-input {
+        display: inline-block;
+        border: 1px solid #333;
+        padding-left: 10px;
+        border-radius: 5px;
+        height: 20px;
+        width: 200px;
+        outline: none;
+    }
+    /*新闻内容输入框及label的样式设置*/
+    
+    #newscontent-label {
+        position: relative;
+        top: -135px;
+    }
+    
+    #newscontent {
+        padding-top: 5px;
+        padding-left: 10px;
+        border-radius: 5px;
+        width: 300px;
+        height: 150px;
+        border: 1px solid #333;
+    }
+    /*提交及重置按钮的样式设置*/
+    
+    #send,
+    #reset {
+        width: 50px;
+        height: 20px;
+    }
+    /*页面尾部样式*/
+    
+    .footer {
+        position: absolute;
+        height: 50px;
+        width: 100%;
+        text-align: center;
+        line-height: 50px;
+        color: #ffffff;
+        background-color: #3385ff;
+        font-size: 10px;
+    }
+    
+    .container:after {
+        display: block;
+        background-color: #3385ff;
+        height: 10px;
+    }

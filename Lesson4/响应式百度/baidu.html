@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh" xml:lang="zh" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta content="text/html" charset="UTF-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>百度一下，你就知道</title>
+    <link rel="stylesheet" type="text/css" href="icomoon/style.css">
+    <link rel="stylesheet" type="text/css" href="baidu.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- 页面大于810px与页面小于810px时的头部-->
+        <div class="pc-header m-header">
+            <div class="m-weather">
+                <div class="m-temperature">26°</div>
+                <span class="icon-sun"></span>
+                <div class="line"></div>
+                <div class="m-weather-status">
+                    <p>福州</p>
+                    <p>空气39</p>
+                </div>
+                <span class="icon-circle-down"></span>
+                <span class="icon-user"></span>
+            </div>
+            <!-- 页面宽度大于810px时的导航栏-->
+            <div class="pc-nav">
+                <a href="http://news.baidu.com" target="_blank">新闻</a>
+                <a href="http://www.hao123.com" class="">hao123</a>
+                <a href="http://www.hao123.com">地图</a>
+                <a href="http://v.baidu.com/?fr=bd">视频</a>
+                <a href="http://tieba.baidu.com">贴吧</a>
+                <a href="" id="login">登陆</a>
+                <a href="" id="configure">设置</a>
+                <input type="button" class="more_product" value="更多产品">
+            </div>
+        </div>
+        <!-- 页面主体部分-->
+        <div class="c_body">
+            <div class="c_body_wrap">
+                <!-- 页面宽度大于810时采用的logo图片-->
+                <img src="bd_logo1.png" class="pc-logo" alt="百度logo">
+                <!-- 页面宽度小于810时采用的logo图片-->
+                <img src="plus_logo.png" class="mobile-logo" alt="百度logo">
+                <!-- 输入框与百度一下按钮，在屏幕大小不同时会采用不同的样式-->
+                <form class="form1">
+                    <div class="form1-wrap">
+                        <input type="text" name="textfile" class="textfile">
+                        <input type="submit" class="search" value="百度一下">
+                    </div>
+                </form>
+            </div>
+            <!-- 屏幕小于810时的导航栏，大于810px时则不显示-->
+            <div class="m-nav">
+                <a href="#">
+                    <i class="icon-news first-nav-logo"></i> 新闻
+                </a>
+                <a href="#">
+                    <i class="icon-book"></i> 小说
+                </a>
+                <a href="#">
+                    <i class="icon-film"></i> 视频
+                </a>
+                <a href="#">
+                    <i class="icon-make-group"></i> 生活
+                </a>
+                <a href="#">
+                    <i class="icon-location3"></i> 地图
+                </a>
+                <a href="#">
+                    <i class="icon-circle-down last-nav-logo"></i> 更多
+                </a>
+            </div>
+            <!-- 附加功能部分，在屏幕大于810px时不显示-->
+            <div class="plus-card">
+                <!-- 导航栏2-->
+                <div class="m-nav2">
+                    <div class="title">
+                        <i class="icon-earth"></i>
+                        <h2>常用地址</h2>
+                        <i class="icon-list2"></i>
+                    </div>
+                    <div class="nav2-list">
+                        <a href="#">贴吧</a>
+                        <a href="#">hao123</a>
+                        <a href="#">地图</a>
+                        <a href="#">应用</a>
+                        <a href="#">图片</a>
+                        <a href="#">音乐</a>
+                        <a href="#">
+                            <i class="icon-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- 实时热点-->
+                <div class="news">
+                    <div class="title">
+                        <i class="icon-file-text2"></i>
+                        <h2>实时热点</h2>
+                        <i class="icon-list2"></i>
+                        <div class="line"></div>
+                        <span class="icon-spinner11">
+                        <span class="refresh">换一批</span>
+                        </span>
+                    </div>
+                    <div class="news-list">
+                        <a href="#">2015阅兵</a>
+                        <a href="#">老兵步入大会堂</a>
+                        <a href="#">世预赛国足战香港</a>
+                        <a href="#">崔永元聊抗战</a>
+                        <a href="#">艺术界人士观礼</a>
+                        <a href="#">中国降裁军30万</a>
+                    </div>
+                </div>
+                <!-- 周边服务-->
+                <div class="service">
+                    <div class="title">
+                        <i class="icon-location2"></i>
+                        <h2>周边服务</h2>
+                        <i class="icon-list2"></i>
+                    </div>
+                    <div class="service-content">
+                        <div class="location">
+                            <span>点击定位，查看附近位置信息</span>
+                            <button type="submit">
+                                <span class="icon-radio-checked"></span> 定位
+                            </button>
+                        </div>
+                        <div class="service-list">
+                            <a href="#" class="movie">
+                                <div class="circle">
+                                    <i class="icon-video-camera"></i>
+                                </div>
+                                看电影
+                            </a>
+                            <a href="#" class="food">
+                                <div class="circle">
+                                    <i class="icon-spoon-knife"></i>
+                                </div>
+                                美食
+                            </a>
+                            <a href="#" class="hotel">
+                                <div class="circle">
+                                    <i class="icon-office"></i>
+                                </div>
+                                酒店
+                            </a>
+                            <a href="#" class="bank">
+                                <div class="circle">
+                                    <i class="icon-coin-yen"></i>
+                                </div>
+                                银行
+                            </a>
+                            <a href="#" class="bus">
+                                <div class="circle">
+                                    <i class="icon-road"></i>
+                                </div>
+                                公交
+                            </a>
+                            <a href="#" class="view">
+                                <div class="circle">
+                                    <i class="icon-camera"></i>
+                                </div>
+                                景点
+                            </a>
+                            <a href="#" class="take-out">
+                                <div class="circle">
+                                    <i class="icon-phone"></i>
+                                </div>
+                                看电影
+                            </a>
+                            <a href="#" class="groupon">
+                                <div class="circle">
+                                    <i class="icon-price-tag" id="price-tag"></i>
+                                </div>
+                                团购
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 交通路况-->
+                <div class="traffic-status">
+                    <div class="title">
+                        <i class="icon-road"></i>
+                        <h2>交通路况</h2>
+                        <i class="icon-list2"></i>
+                    </div>
+                    <div class="add">
+                        <p class="add-address">设置家和公司地址</p>
+                        <p>随时随地，了解实时路况</p>
+                    </div>
+                </div>
+                <div class="admin">
+                    <a href="#">
+                        <i class="icon-cog"></i> 管理我的首页
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 页面尾部，根据屏幕宽度显示不同样式-->
+        <div class="footer">
+            <div class="m-foot">
+                <button class="topspeed-version">极速版</button>
+                <button class="feedback">用户反馈</button>
+                <a href="#">使用百度前必读&nbsp;Baidu&nbsp;京ICP证030173号</a>
+            </div>
+            <div class="pc-foot">
+                <p>
+                    <a href="#" class="line1">把百度设为主页</a>
+                    <a href="#" class="line1">关于百度</a>
+                    <a href="#" class="line1">about Baidu</a>
+                </p>
+                <p>
+                    ©2015&nbsp;Baidu&nbsp;
+                    <a href="http://www.baidu.com/duty/" class="line2">使用百度前必读</a>
+                    <a href="http://jianyi.baidu.com/" class="line2">意见反馈</a> &nbsp;京ICP证030173号&nbsp;
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

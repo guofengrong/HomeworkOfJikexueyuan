@@ -1,0 +1,30 @@
+/*页面主体部分的样式设置：
+1、该文件是主入口，将其下的其他scss文件引入本文件中；
+2、.pager-wrapper是页面主体的外层包裹；
+3、.main下包含了左侧课程分类导航条、中部的海报轮播以及右侧的关于计科学院的介绍部分的样式设置；
+*/
+
+@mixin boxSize($boxWidth,$boxHeight) {
+    width: $boxWidth;
+    height: $boxHeight;
+}
+
+.pager-wrapper {
+    position: relative;
+    @include boxSize(100%,3121px);
+    margin-top: 20px;
+}
+
+.pager {
+    position: absolute;
+    left: 50%;
+    margin-left: -500px;
+    @include boxSize(1000px,3121px);
+}
+
+@import 'pager/pager_main';
+@import 'pager/_hot-lesson';
+@import 'pager/_career-path';
+@import 'pager/_system';
+@import 'pager/_wiki';
+@import 'pager/_P&U&M';

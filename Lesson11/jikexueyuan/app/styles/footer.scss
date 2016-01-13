@@ -1,0 +1,148 @@
+/*尾部样式设置*/
+
+$niceGreen: #35b558;
+@mixin boxSize($boxWidth,$boxHeight) {
+    width: $boxWidth;
+    height: $boxHeight;
+}
+
+.footer-wrapper {
+    position: relative;
+    @include boxSize(100%,251px);
+    margin-top: 50px;
+    border: 1px solid #e4e4e4;
+    background-color: #fafafa;
+}
+
+.footer {
+    position: absolute;
+    left: 50%;
+    margin-left: -500px;
+}
+
+.jk-info {
+    @include boxSize(1000px,251px);
+}
+
+.jk-info-box {
+    float: left;
+    @include boxSize(154px,175px);
+    padding-left: 30px;
+    margin-top: 25px;
+    border-left: 1px solid #e4e4e4;
+    h2 {
+        font-size: 14px;
+        color: #666;
+        font-weight: normal;
+        cursor: pointer;
+        &:hover {
+            color: $niceGreen;
+        }
+    }
+}
+.jk-info-list {
+    list-style:none;
+    a {
+        display: block;
+        @include boxSize(154px,16px);
+        line-height: 16px;
+        margin-top: 10px;
+        font-size: 12px;
+        text-decoration: none;
+        color: #666;
+        cursor: pointer;
+        &:hover {
+            color: $niceGreen;
+        }
+    }
+}
+
+.search-share {
+    float: left;
+    @include boxSize(219px,206px);
+    padding: 20px 0 0 40px;
+    border-left: 1px solid #e4e4e4;
+    h2 {
+        @include boxSize(219px,20px);
+        line-height: 20px;
+        font-size: 15px;
+        color: $niceGreen;
+        margin-bottom: 15px;
+        font-weight: normal;
+    }
+}
+
+.app-download {
+    display: block;
+    @include boxSize(219px,43px);
+    cursor: pointer;
+    text-decoration: none;
+    img {
+        display: inline-block;
+        float: left;
+        @include boxSize(21px,39px);
+        margin-right: 15px;
+    }
+        strong {
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+    p {
+        font-size: 14px;
+        color: #999;
+    }
+}
+
+.share {
+    @include boxSize(219px,32px);
+    margin-top: 15px;
+    img {
+        float: left;
+        @include boxSize(32px,32px);
+        margin-right: 10px;
+    }
+}
+
+.service-online {
+    @include boxSize(184px,40px);
+    margin-top: 15px;
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        img {
+            float: left;
+            @include boxSize(40px,40px);
+        }
+        h5 {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 2px;
+            padding-left: 10px;
+        }
+        p {
+            font-size: 12px;
+            color: #999;
+            padding-left: 10px;
+        }
+    }
+}
+
+.copyright {
+    @include boxSize(960px,16px);
+    padding: 20px;
+    line-height: 16px;
+    p {
+        text-align: center;
+        color: #999;
+        font-size: 12px;
+        a {
+            color: #999;
+            text-decoration: none;
+            cursor: pointer;
+            &:hover {
+                color: $niceGreen;
+            }
+        }
+    }
+}

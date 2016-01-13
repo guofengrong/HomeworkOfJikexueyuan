@@ -1,0 +1,68 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?m4p3y3');
+	src:url('fonts/icomoon.eot?m4p3y3#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?m4p3y3') format('truetype'),
+		url('fonts/icomoon.woff?m4p3y3') format('woff'),
+		url('fonts/icomoon.svg?m4p3y3#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-spinner11:before {
+	content: "\e60b";
+}
+.icon-cog:before {
+	content: "\e60c";
+}
+.icon-bin:before {
+	content: "\e800";
+}
+.icon-download3:before {
+	content: "\e804";
+}
+.icon-sun:before {
+	content: "\e612";
+}
+.icon-heart:before {
+	content: "\e801";
+}
+.icon-play2:before {
+	content: "\e613";
+}
+.icon-next:before {
+	content: "\e802";
+}
+.icon-play:before {
+	content: "\e806";
+}
+.icon-play3:before {
+	content: "\e614";
+}
+.icon-volume-high:before {
+	content: "\e803";
+}
+.icon-circle-up:before {
+	content: "\e900";
+}
+.icon-paragraph-left:before {
+	content: "\e805";
+}
+.icon-tag:before {
+	content: "\e807";
+}
+

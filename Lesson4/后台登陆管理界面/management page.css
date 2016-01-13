@@ -1,0 +1,138 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {}
+    
+    .container {
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        height: 100%;
+    }
+    /*页面头部样式*/
+    
+    .head {
+        background-color: #3385ff;
+        height: 50px;
+    }
+    
+    .project-name {
+        display: block;
+        color: #ffffff;
+        font-size: 18px;
+        padding: 15px;
+        line-height: 18px;
+        float: left;
+    }
+    
+    .project-name:hover {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    
+    @-moz-document url-prefix() {
+        a:focus {
+            outline: none;
+        }
+    }
+    
+    .nav {
+        color: #ffffff;
+    }
+    
+    .navbar-right {
+        position: relative;
+        right: 15px;
+    }
+    
+    .navbar-font {
+        color: #ffffff;
+    }
+    
+    #admin {
+        padding: 0;
+    }
+    
+    #adminlogo {
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        position: absolute;
+        right: 342px;
+    }
+    /*页面主体样式*/
+    
+    .article {
+        background-color: transparent;
+        height: auto;
+        overflow: hidden;
+    }
+    /*主体部分左侧样式*/
+    
+    .article.left {
+        background-color: #f5f5f5;
+        float: left;
+        width: 200px;
+        height: 600px;
+        margin-left: -100%;
+        overflow-y: auto;
+    }
+    /*主体部分右侧样式*/
+    
+    .article.right {
+        background-color: #6495ed;
+        float: left;
+        width: 100px;
+        height: 16px;
+        margin-left: -100px;
+    }
+    /*主体部分中间样式*/
+    
+    .article .middle {
+        background-color: transparent;
+        float: left;
+        width: 100%;
+        height: 600px;
+        overflow-y: auto;
+    }
+    /*主体中间部分内部div样式*/
+    
+    .inner {
+        margin-left: 200px;
+        margin-right: 50px;
+    }
+    
+    .h2 {
+        margin-left: 15px;
+    }
+    
+    #userlogo {
+        position: relative;
+        top: 0;
+    }
+    
+    #userlist {
+        position: relative;
+        left: 20px;
+        top: 100px;
+        text-align: center;
+    }
+    
+    #search-user {
+        position: relative;
+        top: 70px;
+        left: 20px;
+    }
+    
+    .footer {
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        color: #ffffff;
+        background-color: #3385ff;
+        font-size: 10px;
+        margin: 0;
+    }

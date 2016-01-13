@@ -1,0 +1,87 @@
+    /*背景图片样式设定*/
+    body {
+        background-image: url("../images/yuantu09.jpg");
+        background-position: center center;
+    }
+    /*容器样式*/
+    
+    .container {
+        min-width: 800px;
+        min-height: 600px;
+        height: 100%;
+    }
+    /*输入表单样式*/
+    
+    .sign-in {
+        width: 300px;
+        position: relative;
+        left: 50%;
+        top: 150px;
+        margin-left: -150px;
+    }
+    /*账号输入框样式*/
+    
+    #input_username {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    /*密码输入框文本样式*/
+    
+    #input_password {
+        position: relative;
+        top: -15px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    /*账号logo样式*/
+    
+    #userlogo {
+        position: relative;
+        top: 0;
+        left: 1px;
+        border-top-left-radius: 5px;
+    }
+    /*密码logo样式*/
+    
+    #passwordlogo {
+        position: relative;
+        top: -15px;
+        left: 1px;
+        border-bottom-left-radius: 5px;
+    }
+    .input-status {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -100px;
+        margin-top: 70px;
+        width: 200px;
+        height: 20px;
+        font-size: 12px;
+        display: none;
+    }
+    .skip-info {
+        display: none;
+        position: absolute;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 20px;
+        top: 50%;
+        left: 50%;
+        margin-left: -60px;
+        margin-top: -25px;
+    }
+    /*页面尾部样式*/
+    .footer {
+        position: absolute;
+        top: 500px;
+        left: 50%;
+        margin-left: -100px;
+        text-align: center;
+        background-color: transparent;
+    }

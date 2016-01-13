@@ -1,0 +1,1674 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh" xml:lang="zh" xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta content="text/html" charset="UTF-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>百度一下，你就知道</title>
+    <link rel="stylesheet" type="text/css" href="styles/icomoon/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/baidu.css">
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
+    <script type="text/javascript" src="bower_components\jquery\dist\jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="pc-header">
+            <!-- 页面的导航栏-->
+            <div class="pc-nav">
+                <div class="pc-nav-left">
+                    <div class="weather">
+                        <span class="city-name">
+            				福州：<i class="icon-sun"></i>21°
+            			</span>
+                        <span class="temp">优 34</span>
+                        <div class="line1"></div>
+                    </div>
+                    <div class="s-icons">
+                        <a href="#">宝箱</a>
+                        <a href="#">换肤</a>
+                        <a href="#">消息</a>
+                    </div>
+                </div>
+                <div class="pc-nav-right">
+                    <a href="http://news.baidu.com" class="nav-list" target="_blank">新闻</a>
+                    <a href="http://www.hao123.com" class="nav-list">hao123</a>
+                    <a href="http://www.hao123.com" class="nav-list">地图</a>
+                    <a href="http://v.baidu.com/?fr=bd" class="nav-list">视频</a>
+                    <a href="http://tieba.baidu.com" class="nav-list">贴吧</a>
+                    <a href="#" id="username" class="nav-list">guofengrong</a>
+                    <div class="user-pd pull-down">
+                        <i class="arrow1"></i>
+                        <i class="arrow2"></i>
+                        <a>我的VIP</a>
+                        <a>个人中心</a>
+                        <a>账号设置</a>
+                        <a>意见反馈</a>
+                        <a>退出</a>
+                    </div>
+                    <a href="#" id="configure1" class="nav-list">设置</a>
+                    <div class="cog-pd pull-down" id="cog-pull-down">
+                        <i class="arrow1"></i>
+                        <i class="arrow2"></i>
+                        <a>搜索设置</a>
+                        <a>高级搜索</a>
+                        <a>关闭预测</a>
+                        <a>搜索历史</a>
+                    </div>
+                    <button id="more_product1" class="nav-list">更多产品</button>
+                    <!-- 点击更多产品后右侧弹出的产品侧边栏-->
+                    <div class="product_list_wrapper">
+                        <div class="product_list">
+                            <div id="more_product2">
+                                更多产品
+                            </div>
+                            <a class="product" href="#">
+                                <img src="images/product/nuomi.png" alt="productLogo"> 糯米
+                            </a>
+                            <a class="product" href="#">
+                                <img src="images/product/zhidao.png" alt="productLogo"> 知道
+                            </a>
+                            <a class="product" href="#">
+                                <img src="images/product/music.png" alt="productLogo"> 音乐
+                            </a>
+                            <a class="product" href="#">
+                                <img src="./images/product/image.png" alt="productLogo"> 图片
+                            </a>
+                            <a class="product" href="#">
+                                <img src="./images/product/wenku.png" alt="productLogo">文库
+                            </a>
+                            <a class="product" href="#">
+                                <img src="./images/product/bang.png" alt="productLogo">风云榜
+                            </a>
+                            <a class="product" href="#">
+                                <img src="./images/product/tuiguang.png" alt="productLogo">百度推广
+                            </a>
+                            <a class="all-product" href="#">
+		                            全部产品>>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 页面主体部分-->
+        <div class="c_body">
+            <div class="search_wrap">
+                <!-- 页面的logo图片-->
+                <img src="images/bd_logo1.png" class="pc-logo" alt="百度logo">
+                <!-- 输入框与百度一下按钮-->
+                <form class="form1">
+                    <div class="form1-wrap">
+                        <input type="text" name="textfile" class="textfile" autofocus="autofocus">
+                        <input type="submit" class="search" value="百度一下">
+                    </div>
+                </form>
+            </div>
+            <!-- 登陆后搜索框下方的菜单栏-->
+            <div class="main-menu-wrap">
+                <div class="main-menu">
+                    <!-- 菜单左侧的导航条-->
+                    <div class="main-menu-left">
+                        <a href="#" class="click">导航
+                            <span id="arrow1"></span>
+                        </a>
+                        <a href="#" class="normal">新闻</a>
+                        <a href="#" class="normal">音乐</a>
+                        <a href="#" class="normal">购物</a>
+                        <a href="#" class="normal">视频</a>
+                        <a href="#" class="normal" id="preference">
+                            <i class="icon-cog"></i>
+                        </a>
+                    </div>
+                    <div class="main-menu-right">
+                        <!-- 收藏链接及推荐链接菜单-->
+                        <div class="visible1 menu">
+                            <div id="navigation">
+                                <div class="tab-nav">
+                                    <a href="#" class="tab-nav-click">我的导航</a>
+                                    <a href="#">推荐导航</a>
+                                </div>
+                                <div class="visible2 link-wrapper" id="my-link">
+                                    <div class="mylink">
+                                        <a>综合</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#"><img src="./images/mylink/95727.png" alt="link-icon">去哪儿</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="./images/mylink/6000.png" alt="link-icon">agogo</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="./images/mylink/82860.png" alt="link-icon">福州金逸影城</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="mylink">
+                                        <a>购物</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#"><img src="./images/mylink/95534.png" alt="link-icon">蘑菇街</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="./images/mylink/6.png" alt="link-icon">福州团购</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="./images/mylink/95569.png" alt="link-icon">拍拍网</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="./images/mylink/9114.png" alt="link-icon">乐蜂网</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="./images/mylink/95526.png" alt="link-icon">美团网</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="mylink">
+                                        <a>游戏</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#"><img src="./images/mylink/95540.png" alt="link-icon">三国杀网页版</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="mylink">
+                                        <a>影视</a>
+                                        <ul>
+                                            <li style="border-bottom: 1px solid #e9e9e9">
+                                                <a href="#"><img src="./images/mylink/8132.png" alt="link-icon">大狗狗</a>
+                                            </li>
+                                            <li style="border-bottom: 1px solid #e9e9e9">
+                                                <a href="#"><img src="./images/mylink/2558.png" alt="link-icon">神探夏洛克</a>
+                                            </li>
+                                            <li style="border-bottom: 1px solid #e9e9e9">
+                                                <a href="#"><img src="./images/mylink/2558.png" alt="link-icon">华丽的挑战</a>
+                                            </li>
+                                            <li style="border-bottom: 1px solid #e9e9e9">
+                                                <a href="#"><img src="./images/mylink/9664.png" alt="link-icon">双城记</a>
+                                            </li>
+                                            <li style="border-bottom: 1px solid #e9e9e9">
+                                                <a href="#"><img src="./images/mylink/9664.png" alt="link-icon">吸血鬼日记</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="./images/mylink/2558.png" alt="link-icon">画皮</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="./images/mylink/8156.png" alt="link-icon">跑跑影院</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="./images/mylink/9664.png" alt="link-icon">奇热剧集站</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="mylink">
+                                        <a>工具</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#"><img src="./images/mylink/10295.png" alt="link-icon">福州天气</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="./images/mylink/7993.png" alt="link-icon">动车时刻</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="link-wrapper" id="recommendation">
+                                    <div class="hot-title">
+                                        热门网址
+                                    </div>
+                                    <div class="recommendation-wrapper">
+                                        <a>
+                                            <img src="./images/recommendation-link/101.png" alt="link-logo" />
+                                        </a>
+                                        <a>
+                                            <img src="./images/recommendation-link/129.png" alt="link-logo" />
+                                        </a>
+                                        <a>
+                                            <img src="./images/recommendation-link/120.png" alt="link-logo" />
+                                        </a>
+                                        <a>
+                                            <img src="./images/recommendation-link/121.png" alt="link-logo" />
+                                        </a>
+                                        <a>
+                                            <img src="./images/recommendation-link/132.png" alt="link-logo" />
+                                        </a>
+                                        <a>
+                                            <img src="./images/recommendation-link/7.png" alt="link-logo" />
+                                        </a>
+                                        <a>
+                                            <img src="./images/recommendation-link/144.png" alt="link-logo" />
+                                        </a>
+                                        <a>
+                                            <img src="./images/recommendation-link/145.png" alt="link-logo" />
+                                        </a>
+                                        <a>
+                                            <img src="./images/recommendation-link/146.png" alt="link-logo" />
+                                        </a>
+                                        <a>
+                                            <img src="./images/recommendation-link/147.png" alt="link-logo" />
+                                        </a>
+                                        <a>
+                                            <img src="./images/recommendation-link/164.png" alt="link-logo" />
+                                        </a>
+                                        <a>
+                                            <img src="./images/recommendation-link/165.png" alt="link-logo" />
+                                        </a>
+                                        <a>
+                                            <img src="./images/recommendation-link/143.png" alt="link-logo" />
+                                        </a>
+                                        <a>
+                                            <img src="./images/recommendation-link/149.png" alt="link-logo" />
+                                        </a>
+                                        <a>
+                                            <img src="./images/recommendation-link/102.png" alt="link-logo" />
+                                        </a>
+                                        <a>
+                                            <img src="./images/recommendation-link/116.png" alt="link-logo" />
+                                        </a>
+                                        <a>
+                                            <img src="./images/recommendation-link/108.png" alt="link-logo" />
+                                        </a>
+                                        <a>
+                                            <img src="./images/recommendation-link/125.png" alt="link-logo" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 新闻菜单-->
+                        <div class="menu">
+                            <div id="news">
+                                <div class="pic-wrapper">
+                                    <div class="pic">
+                                        <div class="pic-viewer">
+                                            <a href="#">
+                                                <img src="./images/news-pic/1.jpg" alt="news-pic" />
+                                            </a>
+                                            <a href="#">
+                                                <img src="./images/news-pic/1.jpg" alt="news-pic" />
+                                            </a>
+                                            <a href="#">
+                                                <img src="./images/news-pic/1.jpg" alt="news-pic" />
+                                            </a>
+                                            <a href="#">
+                                                <img src="./images/news-pic/1.jpg" alt="news-pic" />
+                                            </a>
+                                            <a href="#">
+                                                <img src="./images/news-pic/1.jpg" alt="news-pic" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="pic-nav">
+                                        <a>
+                                            <img src="./images/news-pic/1.jpg">
+                                        </a>
+                                        <a>
+                                            <img src="./images/news-pic/2.jpg">
+                                        </a>
+                                        <a>
+                                            <img src="./images/news-pic/3.jpg">
+                                        </a>
+                                        <a>
+                                            <img src="./images/news-pic/4.jpg">
+                                        </a>
+                                        <a>
+                                            <img src="./images/news-pic/5.jpg">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="news-list-wrapper">
+                                    <div class="title1">
+                                        <a href="#" class="hot-link">
+                                            <img src="./images/95585.png" alt="icon" />搜索风云榜
+                                        </a>
+                                        <a class="change">
+                                            <i class="icon-spinner11"></i>换一换
+                                        </a>
+                                    </div>
+                                    <div class="news-list">
+                                        <ul>
+                                            <li>
+                                                <a>
+                                                    <i class="dot"></i> 英女王欢迎习近平
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <i class="dot"></i> 重庆富豪捡垃圾
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <i class="dot"></i> 司机冒充赵薇老公
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <i class="dot"></i> 奥森公园现白鼠
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <i class="dot"></i> 夜跑教师尸体找到
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <i class="dot"></i> 学生打印机印假钞
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <i class="dot"></i> 工地现汉阳铁厂碑
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <i class="dot"></i> 王宝强娇妻晒美照
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <i class="dot"></i> 何炅金龟子再相聚
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <i class="dot"></i> 北京凶宅数据库
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <i class="dot"></i> 全美最长腿女孩
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <i class="dot"></i> 碰瓷被撞箭步飞奔
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <i class="dot"></i> 佟丽娅董璇神同步
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <i class="dot"></i> 电影局整治幽灵场
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <i class="dot"></i> 琅琊榜登陆韩国
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <i class="dot"></i> 女子手撕准女婿
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 音乐菜单-->
+                        <div class="menu">
+                            <div id="music">
+                                <div class="album-cover-wrapper">
+                                    <div class="album-cover">
+                                        <i class="icon-play2"></i>
+                                    </div>
+                                </div>
+                                <div class="player-wrapper">
+                                    <div class="play-panel">
+                                        <div class="music-info">
+                                            <span class="name">不要说话</span>
+                                            <span class="singer">陈奕迅</span>
+                                            <div>
+                                                <span class="progress-bar"></span>
+                                                <span class="time-remaining">-4:30</span>
+                                            </div>
+                                            <span class="icon-volume-high"></span>
+                                            <a class="download">
+                                                <i class="icon-download3"></i> 下载
+                                            </a>
+                                        </div>
+                                        <div class="music-ctrl">
+                                            <ul>
+                                                <li>
+                                                    <a>
+                                                        <i class="icon-play2"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a>
+                                                        <span>
+														<i class="icon-heart"></i>
+													</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a>
+                                                        <span>
+														<i class="icon-bin"></i>
+													</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a>
+                                                        <i class="icon-next"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="lrc-wrapper">
+                                            <div class="line2"></div>
+                                            <a class="bd-music"></a>
+                                            <div class="lrc">
+                                                抱歉，此歌曲暂无歌词
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="channel-wrapper">
+                                    <div class="title2">
+                                        <span>热门频道</span>
+                                    </div>
+                                    <div class="channel">
+                                        <ul>
+                                            <li>
+                                                <a class="row1">私人频道</a>
+                                            </li>
+                                            <li>
+                                                <a class="row2">红心频道</a>
+                                            </li>
+                                            <li>
+                                                <a class="row1">随便听听</a>
+                                            </li>
+                                            <li>
+                                                <a class="row2">欧美</a>
+                                            </li>
+                                            <li>
+                                                <a class="row1">经典老歌</a>
+                                            </li>
+                                            <li>
+                                                <a class="row2">DJ舞曲</a>
+                                            </li>
+                                            <li>
+                                                <a class="row1">热歌</a>
+                                            </li>
+                                            <li>
+                                                <a class="row2">网络红歌</a>
+                                            </li>
+                                            <li>
+                                                <a class="row1">成名曲</a>
+                                            </li>
+                                            <li>
+                                                <a class="row2">火爆新歌</a>
+                                            </li>
+                                            <li>
+                                                <a class="row1">流行歌曲</a>
+                                            </li>
+                                            <li>
+                                                <a class="row2">快乐旋律</a>
+                                            </li>
+                                            <li>
+                                                <a class="row1">KTV金曲</a>
+                                            </li>
+                                            <li>
+                                                <a class="row2">伤感调频</a>
+                                            </li>
+                                            <li>
+                                                <a class="row1">80后</a>
+                                            </li>
+                                            <li>
+                                                <a class="row2">90后</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 购物菜单-->
+                        <div class="menu">
+                            <div id="shopping">
+                                <div class="shopping-wrapper">
+                                    <div class="title-wrapper">
+                                        <div class="title3">
+                                            <a href="#" class="tab-click title3-tab">今日优选</a>
+                                            <a href="#" class="title3-tab">美食</a>
+                                            <a href="#" class="title3-tab">电影</a>
+                                            <a href="#" class="title3-tab">娱乐</a>
+                                            <a href="#" class="title3-tab">酒店</a>
+                                            <a href="#" class="title3-tab">猜你喜欢</a>
+                                        </div>
+                                        <div class="title4">
+                                            <div class="my-id">
+                                                我的账号
+                                                <i class="icon-play3"></i>
+                                            </div>
+                                            <div class="my-id-list">
+                                                <a>我的订单</a>
+                                                <a>我的积分</a>
+                                            </div>
+                                            <a href="#" class="see-more">查看更多</a>
+                                        </div>
+                                    </div>
+                                    <div class="visible2 content-wrapper" id="today">
+                                        <div class="content">
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/2.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">沃海森折后返现684</a>
+                                                        <a class="pic2-info-2">&#65509;289</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/1.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">沃海森折后返现684</a>
+                                                        <a class="pic2-info-2">&#65509;289</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/3.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">沃海森折后返现684</a>
+                                                        <a class="pic2-info-2">&#65509;289</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/4.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">沃海森折后返现684</a>
+                                                        <a class="pic2-info-2">&#65509;289</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/5.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">沃海森折后返现684</a>
+                                                        <a class="pic2-info-2">&#65509;289</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/6.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">沃海森折后返现684</a>
+                                                        <a class="pic2-info-2">&#65509;289</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sidebar">
+                                            <div class="title5">
+                                                <a class="title5-a1">
+                                                    <img src="images/activity.png" alt="activity.png" /> 限时特惠，购物返现金
+                                                </a>
+                                                <a class="title5-a2">
+                                                    最高立省380元
+                                                </a>
+                                            </div>
+                                            <div class="title6">
+                                                <h3>返利商城</h3>
+                                                <div>
+                                                    <a>百度糯米</a>
+                                                    <a>京东商城</a>
+                                                    <a>一号店</a>
+                                                    <a>当当</a>
+                                                    <a>苏宁易购</a>
+                                                    <a style="color: #38f">更多</a>
+                                                </div>
+                                            </div>
+                                            <div class="title7">
+                                                <h3>免费优惠券</h3>
+                                                <div>
+                                                    <a>洗衣券</a>
+                                                    <a>化妆品券</a>
+                                                    <a>免费书券</a>
+                                                    <a>汽车打蜡</a>
+                                                    <a>手机维修</a>
+                                                    <a style="color: #38f">更多</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-wrapper" id="food">
+                                        <div class="content">
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/12.jpg" alt="pic" width="177px" height="108px">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">桥亭活鱼100元代金券</a>
+                                                        <a class="pic2-info-2">&#65509;90</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/7.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">肯德基经典辣腿堡</a>
+                                                        <a class="pic2-info-2">&#65509;31</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/8.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">万佳单人自助晚餐</a>
+                                                        <a class="pic2-info-2">&#65509;138</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/9.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">佳丽海鲜酒楼代金券</a>
+                                                        <a class="pic2-info-2">&#65509;45</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/10.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">观音素食自助餐</a>
+                                                        <a class="pic2-info-2">&#65509;26</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/11.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">食鼎轩100元代金券</a>
+                                                        <a class="pic2-info-2">&#65509;85</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sidebar">
+                                            <div class="title5">
+                                                <a class="title5-a1">
+                                                    <img src="images/activity.png" alt="activity.png" /> 限时特惠，购物返现金
+                                                </a>
+                                                <a class="title5-a2">
+                                                    最高立省380元
+                                                </a>
+                                            </div>
+                                            <div class="title6">
+                                                <h3>热门分类</h3>
+                                                <div>
+                                                    <a>全部中餐</a>
+                                                    <a>自助餐</a>
+                                                    <a>创意菜私</a>
+                                                    <a>火锅</a>
+                                                    <a>西餐</a>
+                                                    <a style="color: #38f">更多分类</a>
+                                                </div>
+                                            </div>
+                                            <div class="title7">
+                                                <h3>热门商圈</h3>
+                                                <div>
+                                                    <a>鼓楼区</a>
+                                                    <a>仓山区</a>
+                                                    <a>台江区</a>
+                                                    <a>晋安区</a>
+                                                    <a>马尾区</a>
+                                                    <a style="color: #38f">更多商圈</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-wrapper" id="movie">
+                                        <div class="content2">
+                                            <div class="movie-wrapper">
+                                                <a href="#" class="movie-poster">
+                                                    <img src="images/shopping-pic/m1.jpg" alt="movie-poster">
+                                                </a>
+                                                <div class="movie-detail">
+                                                    <h4>蚁人</h4>
+                                                    <span>
+                                                    <img src="images/star.png" alt="grade"/>
+                                                </span>
+                                                    <a href="#">购票</a>
+                                                </div>
+                                            </div>
+                                            <div class="movie-wrapper">
+                                                <a href="#" class="movie-poster">
+                                                    <img src="images/shopping-pic/m2.jpg" alt="movie-poster">
+                                                </a>
+                                                <div class="movie-detail">
+                                                    <h4>夏洛特烦恼</h4>
+                                                    <span>
+                                                    <img src="images/star.png" alt="grade"/>
+                                                </span>
+                                                    <a href="#">购票</a>
+                                                </div>
+                                            </div>
+                                            <div class="movie-wrapper">
+                                                <a href="#" class="movie-poster">
+                                                    <img src="images/shopping-pic/m3.jpg" alt="movie-poster">
+                                                </a>
+                                                <div class="movie-detail">
+                                                    <h4>小飞侠：幻梦起航</h4>
+                                                    <span>
+                                                    <img src="images/star.png" alt="grade"/>
+                                                </span>
+                                                    <a href="#">购票</a>
+                                                </div>
+                                            </div>
+                                            <div class="movie-wrapper">
+                                                <a href="#" class="movie-poster">
+                                                    <img src="images/shopping-pic/m4.jpg" alt="movie-poster">
+                                                </a>
+                                                <div class="movie-detail">
+                                                    <h4>小王子</h4>
+                                                    <span>
+                                                    <img src="images/star.png" alt="grade"/>
+                                                </span>
+                                                    <a href="#">购票</a>
+                                                </div>
+                                            </div>
+                                            <div class="movie-wrapper">
+                                                <a href="#" class="movie-poster">
+                                                    <img src="images/shopping-pic/m5.jpg" alt="movie-poster">
+                                                </a>
+                                                <div class="movie-detail">
+                                                    <h4>名侦探柯南</h4>
+                                                    <span>
+                                                    <img src="images/star.png" alt="grade"/>
+                                                </span>
+                                                    <a href="#">购票</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sidebar2">
+                                            <div class="title8">
+                                                <h3>找影院</h3>
+                                                <div>
+                                                    <a href="#">星美国际影城</a>
+                                                    <a href="#">17.5影城</a>
+                                                    <a href="#">金逸国际影城</a>
+                                                    <a style="color: #38f">更多影院</a>
+                                                </div>
+                                            </div>
+                                            <div class="title9">
+                                                <h3>找团购</h3>
+                                                <div>
+                                                    <a>鼓楼区</a>
+                                                    <a>仓山区</a>
+                                                    <a>台江区</a>
+                                                    <a>晋安区</a>
+                                                    <a>马尾区</a>
+                                                    <a>长乐市</a>
+                                                    <a style="color: #38f">更多商圈</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-wrapper" id="amusement">
+                                        <div class="content">
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/18.jpg" alt="pic" width="177px" height="108px">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">桥亭活鱼100元代金券</a>
+                                                        <a class="pic2-info-2">&#65509;90</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/17.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">肯德基经典辣腿堡</a>
+                                                        <a class="pic2-info-2">&#65509;31</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/16.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">万佳单人自助晚餐</a>
+                                                        <a class="pic2-info-2">&#65509;138</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/15.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">佳丽海鲜酒楼代金券</a>
+                                                        <a class="pic2-info-2">&#65509;45</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/14.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">观音素食自助餐</a>
+                                                        <a class="pic2-info-2">&#65509;26</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/13.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">食鼎轩100元代金券</a>
+                                                        <a class="pic2-info-2">&#65509;85</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sidebar">
+                                            <div class="title5">
+                                                <a class="title5-a1">
+                                                    <img src="images/activity.png" alt="activity.png" /> 限时特惠，购物返现金
+                                                </a>
+                                                <a class="title5-a2">
+                                                    最高立省380元
+                                                </a>
+                                            </div>
+                                            <div class="title6">
+                                                <h3>热门分类</h3>
+                                                <div>
+                                                    <a>足疗按摩</a>
+                                                    <a>KTV</a>
+                                                    <a>其他养生</a>
+                                                    <a>温泉洗浴</a>
+                                                    <a>其他娱乐</a>
+                                                    <a style="color: #38f">更多分类</a>
+                                                </div>
+                                            </div>
+                                            <div class="title7">
+                                                <h3>热门商圈</h3>
+                                                <div>
+                                                    <a>鼓楼区</a>
+                                                    <a>仓山区</a>
+                                                    <a>台江区</a>
+                                                    <a>晋安区</a>
+                                                    <a>马尾区</a>
+                                                    <a style="color: #38f">更多商圈</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-wrapper" id="hotel">
+                                        <div class="content">
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/24.jpg" alt="pic" width="177px" height="108px">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">桥亭活鱼100元代金券</a>
+                                                        <a class="pic2-info-2">&#65509;90</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/23.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">肯德基经典辣腿堡</a>
+                                                        <a class="pic2-info-2">&#65509;31</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/22.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">万佳单人自助晚餐</a>
+                                                        <a class="pic2-info-2">&#65509;138</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/21.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">佳丽海鲜酒楼代金券</a>
+                                                        <a class="pic2-info-2">&#65509;45</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/20.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">观音素食自助餐</a>
+                                                        <a class="pic2-info-2">&#65509;26</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/19.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">食鼎轩100元代金券</a>
+                                                        <a class="pic2-info-2">&#65509;85</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sidebar">
+                                            <div class="title5">
+                                                <a class="title5-a1">
+                                                    <img src="images/activity.png" alt="activity.png" /> 限时特惠，购物返现金
+                                                </a>
+                                                <a class="title5-a2">
+                                                    最高立省380元
+                                                </a>
+                                            </div>
+                                            <div class="title6">
+                                                <h3>热门分类</h3>
+                                                <div>
+                                                    <a>经济型</a>
+                                                    <a>快捷酒店</a>
+                                                    <a>三星酒店</a>
+                                                    <a>四星酒店</a>
+                                                    <a>五星酒店</a>
+                                                    <a style="color: #38f">更多分类</a>
+                                                </div>
+                                            </div>
+                                            <div class="title7">
+                                                <h3>热门商圈</h3>
+                                                <div>
+                                                    <a>鼓楼区</a>
+                                                    <a>仓山区</a>
+                                                    <a>台江区</a>
+                                                    <a>晋安区</a>
+                                                    <a>马尾区</a>
+                                                    <a style="color: #38f">更多商圈</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-wrapper" id="guess-u-like">
+                                        <div class="content">
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/18.jpg" alt="pic" width="177px" height="108px">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">桥亭活鱼100元代金券</a>
+                                                        <a class="pic2-info-2">&#65509;90</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/17.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">肯德基经典辣腿堡</a>
+                                                        <a class="pic2-info-2">&#65509;31</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/16.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">万佳单人自助晚餐</a>
+                                                        <a class="pic2-info-2">&#65509;138</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/15.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">佳丽海鲜酒楼代金券</a>
+                                                        <a class="pic2-info-2">&#65509;45</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/14.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">观音素食自助餐</a>
+                                                        <a class="pic2-info-2">&#65509;26</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pic2-wrapper">
+                                                <div class="pic2-container">
+                                                    <a href="#" class="pic2">
+                                                        <img src="images/shopping-pic/13.jpg" alt="pic">
+                                                    </a>
+                                                    <div class="pic2-info">
+                                                        <a class="pic2-info-1">食鼎轩100元代金券</a>
+                                                        <a class="pic2-info-2">&#65509;85</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sidebar">
+                                            <div class="title5">
+                                                <a class="title5-a1">
+                                                    <img src="images/activity.png" alt="activity.png" /> 限时特惠，购物返现金
+                                                </a>
+                                                <a class="title5-a2">
+                                                    最高立省380元
+                                                </a>
+                                            </div>
+                                            <div class="title6">
+                                                <h3>热门分类</h3>
+                                                <div>
+                                                    <a>全部中餐</a>
+                                                    <a>自助餐</a>
+                                                    <a>创意菜私</a>
+                                                    <a>火锅</a>
+                                                    <a>西餐</a>
+                                                    <a style="color: #38f">更多分类</a>
+                                                </div>
+                                            </div>
+                                            <div class="title7">
+                                                <h3>热门商圈</h3>
+                                                <div>
+                                                    <a>鼓楼区</a>
+                                                    <a>仓山区</a>
+                                                    <a>台江区</a>
+                                                    <a>晋安区</a>
+                                                    <a>马尾区</a>
+                                                    <a style="color: #38f">更多商圈</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 视频菜单-->
+                        <div class="menu">
+                            <div id="video">
+                                <div class="title-wrapper">
+                                    <div class="title3">
+                                        <a href="#" class="tab-click title3-tab">猜你喜欢</a>
+                                        <a href="#" class="title3-tab">短视频</a>
+                                        <a href="#" class="title3-tab">综艺</a>
+                                        <a href="#" class="title3-tab">电视剧</a>
+                                        <a href="#" class="title3-tab">电影</a>
+                                        <a href="#" class="title3-tab">动漫</a>
+                                        <a href="#" class="title3-tab">游戏直播</a>
+                                    </div>
+                                </div>
+                                <div class="visible2 content-wrapper" id="v-guess-u-like">
+                                    <div class="v-pic-viewer">
+                                        <div class="v-pic">
+                                            <a href="#">
+                                                <img src="images/video/1.jpeg" alt="video-pic" />
+                                            </a>
+                                            <a href="#" class="v-name">琅琊榜</a>
+                                        </div>
+                                        <div class="v-pic">
+                                            <a href="#">
+                                                <img src="images/video/2.jpeg" alt="video-pic" />
+                                            </a>
+                                            <a href="#" class="v-name">无心法师</a>
+                                        </div>
+                                        <div class="v-pic">
+                                            <a href="#">
+                                                <img src="images/video/3.jpeg" alt="video-pic" />
+                                            </a>
+                                            <a href="#" class="v-name">RUNNING MAN</a>
+                                        </div>
+                                    </div>
+                                    <div class="video-list">
+                                        <p>
+                                            <span class="no-1">1</span>
+                                            <a href="#" class="v-link">女孩参加达人秀跳舞摔断鼻子，坚持表演</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-2">2</span>
+                                            <a href="#" class="v-link">爱奇艺早班机：曝泰版“梅长苏”变人妖</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-3">3</span>
+                                            <a href="#" class="v-link">环卫工遭宝马女持狗链狂抽 倒地后仍被辱骂</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">4</span>
+                                            <a href="#" class="v-link">教授谈解决光棍危机：低收入男人应合娶老婆</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">5</span>
+                                            <a href="#" class="v-link">误把铁轨当成家 英国醉汉卧轨逼停66列火车</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">6</span>
+                                            <a href="#" class="v-link">俄堪察加火山群上空现奇异云层 形状酷似UFO</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">7</span>
+                                            <a href="#" class="v-link">女孩参加达人秀跳舞摔断鼻子，坚持表演</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">8</span>
+                                            <a href="#" class="v-link">温州老人自称捕到《封神榜》神兽 肢解后叫卖</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">9</span>
+                                            <a href="#" class="v-link">《蜀山战纪2》今晚上线 愣头小子丁隐逆袭归来女</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="content-wrapper" id="short-video">
+                                    <div class="v-pic-viewer">
+                                        <div class="v-pic">
+                                            <a href="#">
+                                                <img src="images/video/1.jpeg" alt="video-pic" />
+                                            </a>
+                                            <a href="#" class="v-name">琅琊榜</a>
+                                        </div>
+                                        <div class="v-pic">
+                                            <a href="#">
+                                                <img src="images/video/2.jpeg" alt="video-pic" />
+                                            </a>
+                                            <a href="#" class="v-name">琅琊榜</a>
+                                        </div>
+                                        <div class="v-pic">
+                                            <a href="#">
+                                                <img src="images/video/3.jpeg" alt="video-pic" />
+                                            </a>
+                                            <a href="#" class="v-name">琅琊榜</a>
+                                        </div>
+                                    </div>
+                                    <div class="video-list">
+                                        <p>
+                                            <span class="no-1">1</span>
+                                            <a href="#" class="v-link">林心如成色情网站吸客工具</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-2">2</span>
+                                            <a href="#" class="v-link">48岁大叔扮少妇约90后网友</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-3">3</span>
+                                            <a href="#" class="v-link">白领要求熬夜衰老算工伤</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">4</span>
+                                            <a href="#" class="v-link">黄子佼结婚未邀小S曾宝仪</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">5</span>
+                                            <a href="#" class="v-link">吉林女子靠炫富诈骗1100万</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">6</span>
+                                            <a href="#" class="v-link">王宝强马蓉夫妇海岛拍婚纱</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">7</span>
+                                            <a href="#" class="v-link">实拍城管群殴商贩致休克</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">8</span>
+                                            <a href="#" class="v-link">女子地铁上裸背承接广告</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">9</span>
+                                            <a href="#" class="v-link">英国醉汉卧轨逼停66列火车</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="content-wrapper" id="variety">
+                                    <div class="v-pic-viewer">
+                                        <div class="v-pic">
+                                            <a href="#">
+                                                <img src="images/video/3.jpeg" alt="video-pic" />
+                                            </a>
+                                            <a href="#" class="v-name">RUNNING MAN</a>
+                                        </div>
+                                        <div class="v-pic">
+                                            <a href="#">
+                                                <img src="images/video/4.jpeg" alt="video-pic" />
+                                            </a>
+                                            <a href="#" class="v-name">快乐大本营</a>
+                                        </div>
+                                        <div class="v-pic">
+                                            <a href="#">
+                                                <img src="images/video/5.jpeg" alt="video-pic" />
+                                            </a>
+                                            <a href="#" class="v-name">偶像来了</a>
+                                        </div>
+                                    </div>
+                                    <div class="video-list">
+                                        <p>
+                                            <span class="no-1">1</span>
+                                            <a href="#" class="v-link">无限挑战</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-2">2</span>
+                                            <a href="#" class="v-link">我是大美人</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-3">3</span>
+                                            <a href="#" class="v-link">非常勿扰</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">4</span>
+                                            <a href="#" class="v-link">透明人</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">5</span>
+                                            <a href="#" class="v-link">舞动奇迹</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">6</span>
+                                            <a href="#" class="v-link">跟着贝尔去冒险</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">7</span>
+                                            <a href="#" class="v-link">金星脱口秀</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">8</span>
+                                            <a href="#" class="v-link">变形记</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">9</span>
+                                            <a href="#" class="v-link">爱情保卫战</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="content-wrapper" id="teleplay">
+                                    <div class="v-pic-viewer">
+                                        <div class="v-pic">
+                                            <a href="#">
+                                                <img src="images/video/1.jpeg" alt="video-pic" />
+                                            </a>
+                                            <a href="#" class="v-name">琅琊榜</a>
+                                        </div>
+                                        <div class="v-pic">
+                                            <a href="#">
+                                                <img src="images/video/6.jpeg" alt="video-pic" />
+                                            </a>
+                                            <a href="#" class="v-name">花千骨</a>
+                                        </div>
+                                        <div class="v-pic">
+                                            <a href="#">
+                                                <img src="images/video/7.jpeg" alt="video-pic" />
+                                            </a>
+                                            <a href="#" class="v-name">云中歌</a>
+                                        </div>
+                                    </div>
+                                    <div class="video-list">
+                                        <p>
+                                            <span class="no-1">1</span>
+                                            <a href="#" class="v-link">西游记</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-2">2</span>
+                                            <a href="#" class="v-link">福星高照猪八戒</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-3">3</span>
+                                            <a href="#" class="v-link">极品女士 第四季</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">4</span>
+                                            <a href="#" class="v-link">凌云壮志包青天</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">5</span>
+                                            <a href="#" class="v-link">伪装者</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">6</span>
+                                            <a href="#" class="v-link">三国演义</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">7</span>
+                                            <a href="#" class="v-link">暗黑者2</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">8</span>
+                                            <a href="#" class="v-link">甄嬛传</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">9</span>
+                                            <a href="#" class="v-link">杉杉来了</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="content-wrapper" id="v-movie">
+                                    <div class="v-pic-viewer">
+                                        <div class="v-pic">
+                                            <a href="#">
+                                                <img src="images/video/8.jpeg" alt="video-pic" />
+                                            </a>
+                                            <a href="#" class="v-name">新世界</a>
+                                        </div>
+                                        <div class="v-pic">
+                                            <a href="#">
+                                                <img src="images/video/9.jpeg" alt="video-pic" />
+                                            </a>
+                                            <a href="#" class="v-name">黎明杀机</a>
+                                        </div>
+                                        <div class="v-pic">
+                                            <a href="#">
+                                                <img src="images/video/10.jpeg" alt="video-pic" />
+                                            </a>
+                                            <a href="#" class="v-name">小时代4：灵魂尽头</a>
+                                        </div>
+                                    </div>
+                                    <div class="video-list">
+                                        <p>
+                                            <span class="no-1">1</span>
+                                            <a href="#" class="v-link">快乐奔跑</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-2">2</span>
+                                            <a href="#" class="v-link">生死对决</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-3">3</span>
+                                            <a href="#" class="v-link">横冲直撞好莱坞</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">4</span>
+                                            <a href="#" class="v-link">非你莫属</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">5</span>
+                                            <a href="#" class="v-link">恋爱大赢家</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">6</span>
+                                            <a href="#" class="v-link">不眠之夜</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">7</span>
+                                            <a href="#" class="v-link">异域2：末路英雄</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">8</span>
+                                            <a href="#" class="v-link">新流星蝴蝶剑</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">9</span>
+                                            <a href="#" class="v-link">煎饼侠</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="content-wrapper" id="cg">
+                                    <div class="v-pic-viewer">
+                                        <div class="v-pic">
+                                            <a href="#">
+                                                <img src="images/video/11.jpeg" alt="video-pic" />
+                                            </a>
+                                            <a href="#" class="v-name">小甜甜</a>
+                                        </div>
+                                        <div class="v-pic">
+                                            <a href="#">
+                                                <img src="images/video/12.jpeg" alt="video-pic" />
+                                            </a>
+                                            <a href="#" class="v-name">古剑奇谭</a>
+                                        </div>
+                                        <div class="v-pic">
+                                            <a href="#">
+                                                <img src="images/video/13.jpeg" alt="video-pic" />
+                                            </a>
+                                            <a href="#" class="v-name">火影忍者</a>
+                                        </div>
+                                    </div>
+                                    <div class="video-list">
+                                        <p>
+                                            <span class="no-1">1</span>
+                                            <a href="#" class="v-link">土豆侠</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-2">2</span>
+                                            <a href="#" class="v-link">妖精的尾巴</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-3">3</span>
+                                            <a href="#" class="v-link">神无月巫女</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">4</span>
+                                            <a href="#" class="v-link">找小哥哥</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">5</span>
+                                            <a href="#" class="v-link">海贼王</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">6</span>
+                                            <a href="#" class="v-link">只有神知道的世界第三季</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">7</span>
+                                            <a href="#" class="v-link">机器人笔记</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">8</span>
+                                            <a href="#" class="v-link">名侦探柯南</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">9</span>
+                                            <a href="#" class="v-link">我的女神第一季</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="content-wrapper" id="game-live">
+                                    <div class="v-pic-viewer">
+                                        <div class="v-pic">
+                                            <a href="#">
+                                                <img src="images/video/1.jpeg" alt="video-pic" />
+                                            </a>
+                                            <a href="#" class="v-name">琅琊榜</a>
+                                        </div>
+                                        <div class="v-pic">
+                                            <a href="#">
+                                                <img src="images/video/2.jpeg" alt="video-pic" />
+                                            </a>
+                                            <a href="#" class="v-name">琅琊榜</a>
+                                        </div>
+                                        <div class="v-pic">
+                                            <a href="#">
+                                                <img src="images/video/3.jpeg" alt="video-pic" />
+                                            </a>
+                                            <a href="#" class="v-name">琅琊榜</a>
+                                        </div>
+                                    </div>
+                                    <div class="video-list">
+                                        <p>
+                                            <span class="no-1">1</span>
+                                            <a href="#" class="v-link">英雄联盟</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-2">2</span>
+                                            <a href="#" class="v-link">百变gamer</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-3">3</span>
+                                            <a href="#" class="v-link">DOTA2</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">4</span>
+                                            <a href="#" class="v-link">炉石传说</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">5</span>
+                                            <a href="#" class="v-link">单机游戏</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">6</span>
+                                            <a href="#" class="v-link">三国杀</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">7</span>
+                                            <a href="#" class="v-link">怀旧记忆</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">8</span>
+                                            <a href="#" class="v-link">格斗游戏</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                        <p>
+                                            <span class="no-4to10">9</span>
+                                            <a href="#" class="v-link">风暴游戏</a>
+                                            <a class="score">1003655</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 页面尾部-->
+        <div class="footer">
+            <p>
+                <a href="#">设为首页</a> ©2015&nbsp;Baidu&nbsp;
+                <a href="http://www.baidu.com/duty/">使用百度前必读</a>
+                <a href="http://jianyi.baidu.com/">意见反馈</a> &nbsp;京ICP证030173号&nbsp;
+                <img src="./images/copy_rignt_24.png">
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="scripts/baidu.js"></script>
+</body>
+
+</html>

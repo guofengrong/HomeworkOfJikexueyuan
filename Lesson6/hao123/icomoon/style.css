@@ -1,0 +1,118 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?-1ct43y');
+	src:url('fonts/icomoon.eot?#iefix-1ct43y') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?-1ct43y') format('truetype'),
+		url('fonts/icomoon.woff?-1ct43y') format('woff'),
+		url('fonts/icomoon.svg?-1ct43y#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-hotel:before {
+	content: "\e600";
+}
+.icon-camera:before {
+	content: "\e601";
+}
+.icon-film:before {
+	content: "\e602";
+}
+.icon-video-camera:before {
+	content: "\e603";
+}
+.icon-book:before {
+	content: "\e604";
+}
+.icon-file-text2:before {
+	content: "\e605";
+}
+.icon-price-tag:before {
+	content: "\e606";
+}
+.icon-coin-yen:before {
+	content: "\e607";
+}
+.icon-phone:before {
+	content: "\e608";
+}
+.icon-location2:before {
+	content: "\e609";
+}
+.icon-user:before {
+	content: "\e60a";
+}
+.icon-spinner11:before {
+	content: "\e60b";
+}
+.icon-cog:before {
+	content: "\e60c";
+}
+.icon-spoon-knife:before {
+	content: "\e60d";
+}
+.icon-road:before {
+	content: "\e60e";
+}
+.icon-target:before {
+	content: "\e60f";
+}
+.icon-list:before {
+	content: "\e610";
+}
+.icon-earth:before {
+	content: "\e611";
+}
+.icon-sun:before {
+	content: "\e612";
+}
+.icon-play2:before {
+	content: "\e613";
+}
+.icon-play3:before {
+	content: "\e614";
+}
+.icon-circle-down:before {
+	content: "\e615";
+}
+.icon-radio-checked:before {
+	content: "\e616";
+}
+.icon-make-group:before {
+	content: "\e617";
+}
+.icon-youtube2:before {
+	content: "\e618";
+}
+.icon-camera2:before {
+	content: "\e619";
+}
+.icon-location:before {
+	content: "\e61a";
+}
+.icon-news:before {
+	content: "\e61b";
+}
+.icon-food:before {
+	content: "\e61c";
+}
+.icon-shop:before {
+	content: "\e61d";
+}
+.icon-wallet:before {
+	content: "\e61e";
+}

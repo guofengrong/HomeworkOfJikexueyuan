@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    position: relative;
+    background-color: #ffffff;
+}
+
+
+/*头部样式设置：
+1、tool-bar-l用于设置百度新闻logo左侧的标签样式（包含百度主页logo，用于按钮标签）；
+2、tool-bar-r用于设置百度新闻logo右侧的标签样式（包含新闻搜索按钮标签及plus-icon标签）*/
+
+.header {
+    position: relative;
+    height: 44px;
+    min-width: 320px;
+    width: 100%;
+    color: #ffffff;
+    background-image: url(../images/bg-news-logo_344ce44.png);
+    background-repeat: no-repeat;
+    background-position: center 6px;
+    background-color: #3e98f0;
+    -webkit-background-size: 77px auto;
+    background-size: 77px auto;
+    border-bottom: 1px solid #ffffff;
+}
+
+.tool-bar-l {
+    position: relative;
+    float: left;
+    height: 100%;
+}
+
+.a-bd {
+    float: left;
+    display: block;
+    background-image: url(../images/bg-new-toolbar_6e9bc53.png);
+    background-position: center 4px;
+    background-repeat: no-repeat;
+    -webkit-background-size: 40px 500px;
+    background-size: 40px 500px;
+    width: 34px;
+    height: 100%;
+    line-height: 44px;
+}
+
+.toolbar-btn {
+    float: left;
+    display: block;
+    width: 34px;
+    height: 100%;
+    line-height: 44px;
+    vertical-align: middle;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.icon-user {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -11px;
+    margin-left: 20px;
+    height: 100%;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.tool-bar-r {
+    position: relative;
+    float: right;
+    height: 100%;
+}
+
+.icon-search,
+.icon-plus {
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+
+/*新闻类型导航条样式设置：
+1、用li标签向做浮动实现新闻类型导航条；
+2、line2是导航条与头部之间的白线样式设置；
+3、line3是导航条选项之间的分隔线样式设置；*/
+
+.nav-wrapper {
+    position: relative;
+    min-width: 320px;
+    width: 100%;
+}
+
+.nav-ul {
+    list-style: none;
+    width: 100%;
+    height: 33px;
+    background-color: #3e98f0;
+}
+
+.nav-li {
+    position: relative;
+    float: left;
+    width: 20%;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+}
+
+.nav-li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.line2 {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -6px;
+    display: inline-block;
+    border-left: 1px solid #ffffff;
+    height: 12px;
+}
+
+.line3 {
+    position: absolute;
+    top: 26px;
+    left: 50%;
+    margin-left: -18px;
+    display: inline-block;
+    border-top: 1px solid #ffffff;
+    width: 32px;
+}
+
+
+/*页面主体新闻显示部分样式设置*/
+
+.main-sections-wrapper {
+    position: relative;
+    min-width: 320px;
+    width: 100%;
+}
+
+
+/*新闻图片轮播：
+1、img-tab-wrapper设置新闻轮播外层包裹；
+2、img-info设置图片下方文字叙述的样式*/
+
+.img-tab-wrapper {
+    position: relative;
+    width: 355px;
+    height: 224px;
+    margin: 10px 10px 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.rec-img-tab，.entertainment-img-tab，.local-img-tab {
+    position: relative;
+    display: block;
+    width: 1065px;
+    height: 224px;
+}
+
+.img-tab {
+    position: relative;
+    width: 1065px;
+    height: 224px;
+}
+
+.img-tab a {
+    position: relative;
+    display: inline-block;
+    float: left;
+    /*margin-right: 10px;*/
+}
+
+.img-tab a img {
+    width: 355px;
+    height: 221px;
+}
+
+.img-info {
+    position: absolute;
+    bottom: 0;
+    width: 345px;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: left;
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+}
+
+
+/*新闻列表样式设置：
+1、news-img设置新闻图片样式；
+2、news-title、news-text分别设置了新闻标题、新闻内容的样式；
+3、addtime设置了新闻添加时间的样式；*/
+
+.news-list-item {
+    position: relative;
+    margin: 20px 10px 0 10px;
+    display: flex;
+    display: -webki-flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+}
+
+.news-img {
+    position: relative;
+    float: left;
+    width: 95px;
+    height: auto;
+}
+
+.news-img img {
+    width: 95px;
+    height: auto;
+}
+
+.news-info {
+    position: relative;
+    margin-left: 10px;
+}
+
+.news-content {
+    position: relative;
+    float: left;
+    height: 40px;
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-grow: 1;
+    -o-flex-grow: 1;
+    -moz-flex-grow: 1;
+    overflow: hidden;
+}
+
+.news-title {
+    font-size: 16px;
+    line-height: 20px;
+    color: #262b31;
+    margin: -1px 0 4px 0;
+}
+
+.news-text {
+    font-size: 13px;
+    line-height: 20px;
+    color: #b8bac0;
+    font-weight: 400;
+}
+
+.addtime {
+    clear: both;
+    position: relative;
+    top: 10px;
+    display: block;
+    height: 10px;
+    font-size: 13px;
+    color: #b8bac0;
+    font-weight: 400;
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-grow: 1;
+    -o-flex-grow: 1;
+    -moz-flex-grow: 1;
+}
+
+.refresh-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    display: -webki-flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    outline: none;
+}
+
+
+/*加载更多新闻按钮*/
+
+.btn-refresh {
+    margin: 14px 40px;
+    border: 1px solid #ebedef;
+    text-align: center;
+    height: 36px;
+    line-height: 36px;
+    color: #545454;
+    background-color: #f8f9fa;
+    outline: none;
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-grow: 1;
+    -o-flex-grow: 1;
+    -moz-flex-grow: 1;
+}
+
+
+/*页面尾部样式设置：
+1、通过设置footer-item为弹性盒模型使其能够在不同分辨率下实现自由伸缩*/
+
+.footer-wrapper {
+    position: absolute;
+    bottom: -44px;
+    background-color: #3e98f0;
+    width: 100%;
+    height: 44px;
+}
+
+.footer {
+    background-color: #3e98f0;
+    width: 100%;
+    height: 44px;
+    display: flex;
+    display: -webki-flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+}
+
+.footer-item {
+    position: relative;
+    color: #ffffff;
+    height: 44px;
+    line-height: 44px;
+    font-size: 16px;
+    text-align: center;
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-grow: 1;
+    -o-flex-grow: 1;
+    -moz-flex-grow: 1;
+}
+
+.icon-mail {
+    position: relative;
+    top: 4px;
+    color: #ffffff;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.icon-dropbox {
+    position: relative;
+    top: 4px;
+    color: #ffffff;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.icon-download3 {
+    position: relative;
+    top: 4px;
+    color: #ffffff;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.line4 {
+    position: relative;
+    top: 50%;
+    margin-top: -10px;
+    float: left;
+    border-left: 1px solid #ffffff;
+    height: 20px;
+}

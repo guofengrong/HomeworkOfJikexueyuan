@@ -1,0 +1,30 @@
+       /*容器样式*/
+       .container{
+            width: 80%;
+            position: absolute;
+            left: 50%;
+            margin-left: -40%;
+        }
+        /*标题栏样式*/
+        .title{
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            font-size: 24px;
+            color: #1d9fd3;
+
+        }
+        /*问题及答案容器样式*/
+        .q-a {
+            width: 100%;
+            text-align: left;
+            font-size: 16px;
+        }
+        /*问题样式*/
+        .q-a .question{
+            color: #4cae4c;
+        }
+        /*答案样式*/
+        .q-a .answer{
+            color: #080808;
+        } 

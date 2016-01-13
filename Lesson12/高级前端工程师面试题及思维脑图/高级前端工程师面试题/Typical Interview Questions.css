@@ -1,0 +1,75 @@
+       /*容器样式*/
+       .container{
+            position: relative;
+            min-width: 800px;
+        }
+        /*标题栏样式*/
+        .title{
+            position: relative;
+            width: 800px;
+            left: 50%;
+            margin-left: -400px;
+            /*width: 100%;*/
+            height: 100px;
+            text-align: center;
+            font-size: 24px;
+            color: #1d9fd3;
+
+        }
+        /*问题及答案容器样式*/
+        .main {
+            /*float: left;*/
+        }
+        .q-a {
+            position: relative;
+            width: 800px;
+            left: 50%;
+            margin-left: -400px;
+            /*width: 100%;*/
+            text-align: left;
+            font-size: 16px;
+            border-top: 1px solid #e4e4e4;
+        }
+        /*问题样式*/
+        .q-a .question{
+            color: #4cae4c;
+            line-height: 20px;
+        }
+        /*答案样式*/
+        .q-a .answer{
+            color: #080808;
+            line-height: 20px;
+        } 
+
+        .q-a .answer xmp {
+            display: inline-block;
+        }
+        /*x悬浮导航条样式设置*/
+        .floatbar-wrapper {
+            position: absolute;
+            width: 200px;
+            height: 100px;    
+        }
+
+        .floatbar {
+            position: fixed;
+            float: left;
+            top: 120px;
+            left: 20px;
+        }
+
+        .floatbar ul li {
+            /*list-style: none;*/
+
+        }
+
+        .floatbar ul li a {
+            cursor: pointer;
+            font-size: 14px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .floatbar ul li a:hover {
+            color: #1d9fd3;
+        }

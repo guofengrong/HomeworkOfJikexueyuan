@@ -1,0 +1,198 @@
+/*详细的课程分类显示部分：
+1、.lesson-nav设置了横向导航条的样式
+2、.lesson-list li及其中包含的类选择器设置了单个课程的样式，包括鼠标悬停后出现的蒙版、播放按钮、插入的课程介绍等*/
+
+$niceGreen: #35b558;
+$normalColor: #e4e4e4;
+@mixin border($width:1px,$color:#e4e4e4) {
+    border: $width solid $color;
+}
+@mixin border-left($width:1px,$color:#e4e4e4) {
+    border-left: $width solid $color;
+}
+@mixin border-right($width:1px,$color:#e4e4e4) {
+    border-right: $width solid $color;
+}
+@mixin border-top($width:1px,$color:#e4e4e4) {
+    border-top: $width solid $color;
+}
+@mixin border-bottom($width:1px,$color:#e4e4e4) {
+    border-bottom: $width solid $color;
+}
+@mixin boxSize($boxWidth,$boxHeight) {
+    width: $boxWidth;
+    height: $boxHeight;
+}
+
+.hot-lesson-wrapper {
+    position: relative;
+    @include boxSize(100%,auto);
+    margin-top: 30px;
+}
+
+.lesson-nav {
+    position: relative;
+    @include boxSize(1000px,41px);
+    ul{
+        float: left;
+        list-style: none;
+    }
+    li {
+        @extend ul;
+        position: relative;
+        @include boxSize(166px,19px);
+        padding: 10px 0;
+        @include border-bottom(2px,#e4e4e4);
+        color: #666;
+        text-align: center;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .icon-play3 {
+        position: absolute;
+        top: 28px;
+        left: 83px;
+        margin-left: -6px;
+        color: #35b558;
+        /*display: none;*/
+    }
+}
+
+#lesson-nav-first {
+    color: $niceGreen;
+    @include border-bottom(2px,$niceGreen);
+}
+
+.lesson-list-wrapper {
+    @include boxSize(1000px,480px);
+    margin-top: 20px;
+}
+
+.lesson-list ul {
+    width: 1100px;
+}
+
+.recommendation,.new,.free,.practice,.first-publish,.cooperation {
+    display: none;
+}
+
+.lesson-list li {
+    position: relative;
+    float: left;
+    @include boxSize(235px,220px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+.lesson-box {
+    @include boxSize(235px,218px);
+    a img {
+        @include boxSize(233px,129px);
+    }
+}
+
+.box-mouseover {
+    position: absolute;
+    @include boxSize(233px,129px);
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+}
+
+.icon-heart {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: block;
+    @include boxSize(16px,16px);
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+    &:hover {
+        color:$niceGreen;
+    }
+}
+
+.icon-play2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+    display: block;
+    font-size: 40px;
+    color: #808080;
+    cursor: pointer;
+}
+
+.lesson-img {
+    display: block;
+    @include boxSize(233px,129px);
+    @include border();
+    border-bottom: 0;
+}
+
+.lesson-info-box {
+    position: relative;
+    @include boxSize(213px,67px);
+    padding: 10px;
+    @include border();
+    border-top: 0;
+    background-color: #ffffff;
+    z-index: 200;
+}
+
+.title2 {
+    @include boxSize(213px,36px);
+    margin-bottom: 12px;
+    font-size: 14px;
+    text-align: left;
+    color: #333;
+    line-height: 18px;
+    cursor: pointer;
+    a {
+        border: 0;
+        text-decoration: none;
+        color: #333;
+    }
+}
+
+.lesson-info {
+    color: #808080;
+    height: 0;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    /*display: none;*/
+}
+
+.title3 {
+    @include boxSize(213px,24px);
+    span {
+        float: left;
+        color: #808080;
+        font-size: 12px;
+        text-align: left;
+        vertical-align: top;
+    }
+    a {
+        display: inline-block;
+        @include boxSize(16px,16px);
+        float: right;
+        border: 0;
+        cursor: pointer;
+        img {
+            float: right;
+            display: inline-block;
+            @include boxSize(16px,16px);
+        }
+    }
+    em {
+        float: right;
+        display: inline-block;
+        font-size: 12px;
+        color: #808080;
+    }
+}

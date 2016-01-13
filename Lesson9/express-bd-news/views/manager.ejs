@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh" xml:lang="zh" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta content="text/html" charset="UTF-8" http-equiv="content-type">
+    <title>后台管理界面</title>
+    <!-- <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="./stylesheets/management-page.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/icomoon/style.css">
+</head>
+
+<body>
+    <!-- 外层包裹 -->
+    <div class="container">
+        <div class="masking">
+            <div id="success" class="success-page">
+                <span id="success-close">关闭</span>
+                <p>操作成功,页面会在2秒后关闭</p>
+            </div>
+            <div class="confirm-delete">
+                <!-- <span id="delete-close" class="close">关闭</span> -->
+                <p>确认删除该条新闻？</p>
+                <p id="btn-wrapper">
+                    <input id="delete" type="button" value="确认" />
+                    <input id="cancel" type="button" value="取消" />
+                </p>
+                <p id="delete-status"></p>
+            </div>
+            <!-- <div class="success-delete"></div> -->
+            <div class="update-wrapper">
+                <span id='update-close' class="close">关闭</span>
+                <div class="update-content">
+                    <form action="#">
+                        <p>
+                            <label for="newstitle">新闻标题</label>
+                            <input class="btn-input" type="text" id="update-newstitle" name="newstitle" />
+                        </p>
+                        <p>
+                            <label for="newsclass">新闻类型</label>
+                            <select type="1" name="newsclass" id="update-newsclass">
+                                <option>recommendation</option>
+                                <option>local</option>
+                                <option>entertainment</option>
+                            </select>
+                            <small>请选择新闻类型</small>
+                        </p>
+                        <p>
+                            <label for="newsimg">图片地址</label>
+                            <input class="btn-input" type="text" id="update-newsimg" name="newsimg" />
+                        </p>
+                        <p>
+                            <label id="update-label" for="newscontent">新闻内容</label>
+                            <textarea id="update-newscontent" name="newscontent"></textarea>
+                        </p>
+                        <p>
+                            <label for="addtime">新闻时间</label>
+                            <input class="btn-input" type="date" id="update-addtime" name="addtime" />
+                        </p>
+                        <p>
+                            <input id="update-send" type="button" value="提交" />
+                            <input id="update-reset" type="reset" value="重置">
+                        </p>
+                        <p id="update-status"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- 页面头部 -->
+        <div class="head">
+            <a class="project-name" href="#">新闻数据库管理</a>
+            <!-- 头部右侧选项 -->
+            <ul class="nav-ul">
+                <li class="nav-li">
+                    <a href="#" class="nav-li-a">
+                        <!-- 用户头像 -->
+                        <img src="./images/082955428.jpg" class="user-img" alt="adminimg"> 郭丰榕
+                    </a>
+                </li>
+                <li class="nav-li">
+                    <a href="#" class="nav-li-a">账号设置</a>
+                </li>
+                <li class="nav-li">
+                    <a href="#" class="nav-li-a">帮助</a>
+                </li>
+                <li class="nav-li">
+                    <a href="#" class="nav-li-a">退出登陆</a>
+                </li>
+            </ul>
+        </div>
+        <div class="article">
+            <!-- 左侧导航条 -->
+            <div class="left">
+                <ul class="sidebar">
+                    <li class="btn-sidebar" id="recommendation">
+                        <a class="normal" href="#">推荐新闻列表</a>
+                    </li>
+                    <li class="btn-sidebar" id="local">
+                        <a class="normal" href="#">当地新闻列表</a>
+                    </li>
+                    <li class="btn-sidebar" id="entertainment">
+                        <a class="normal" href="#">娱乐新闻列表</a>
+                    </li>
+                    <li class="btn-sidebar" id="edit-news">
+                        <a class="click" href="#">添加新闻</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="middle">
+                <div class="inner">
+                    <!-- 编辑新闻页面-->
+                    <div class="edit-news-wrapper">
+                        <h2 class="h2">添加新闻
+                            <small>在此处可以查看数据库中的新闻信息</small>
+                        </h2>
+                        <form class="form-inline" id="input-news-info" action="#">
+                            <p>
+                                <label for="newstitle">新闻标题</label>
+                                <input class="btn-input" type="text" id="newstitle" name="newstitle" />
+                            </p>
+                            <p>
+                                <label for="newsclass">新闻类型</label>
+                                <select type="1" name="newsclass" id="newsclass">
+                                    <option>recommendation</option>
+                                    <option>local</option>
+                                    <option>entertainment</option>
+                                </select>
+                                <small>请选择新闻类型</small>
+                            </p>
+                            <p>
+                                <label for="newsimg">图片地址</label>
+                                <input class="btn-input" type="text" id="newsimg" name="newsimg" />
+                            </p>
+                            <p>
+                                <label id="newscontent-label" for="newscontent">新闻内容</label>
+                                <textarea id="newscontent" name="newscontent"></textarea>
+                            </p>
+                            <p>
+                                <label for="addtime">新闻时间</label>
+                                <input class="btn-input" type="date" id="addtime" name="addtime" />
+                            </p>
+                            <p>
+                                <input id="send" type="button" value="提交" />
+                                <input id="reset" type="reset" value="重置">
+                            </p>
+                            <p id="submit-status"></p>
+                        </form>
+                    </div>
+                    <!-- 显示新闻列表，用于插入php输出的html标签 -->
+                    <div class="news-list-wrapper"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 页面尾部信息 -->
+        <div class="footer">
+            <p>copyright &copy; 2014-2015 XXXX公司版权所有</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="javascripts/sea.js"></script>
+    <script type="text/javascript">
+    // seajs 的简单配置
+    seajs.config({
+        base: "./javascripts/",
+        alias: {
+            "jquery": "jquery-1.11.3.min"
+        }
+    });
+
+    // 加载入口模块
+    seajs.use("management/management-main");
+    </script>
+</body>
+
+</html>

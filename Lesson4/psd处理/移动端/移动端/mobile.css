@@ -1,0 +1,290 @@
+/*当访问介质宽度小于1024时显示的样式*/
+
+@media only screen and (max-width: 1024px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    /*当访问介质小于1024时，不显示提示信息*/
+    #warning {
+        display: none;
+    }
+    /*外部容器样式*/
+    .container {
+        width: 100%;
+        min-width: 700px;
+    }
+    /*页面头部样式*/
+    .header {
+        width: 100%;
+        height: 412px;
+        background-color: #27ae60;
+    }
+    /*头部导航条样式*/
+    .header-navbar {
+        display: block;
+        height: 100px;
+    }
+    /*网页logo样式*/
+    .web-logo {
+        width: 194px;
+        height: 40px;
+        float: left;
+        margin-left: 5%;
+        position: relative;
+        top: 40px;
+    }
+    /*导航条导航栏列表容器样式*/
+    .navbar-list {
+        display: inline-block;
+        margin-right: 5%;
+        float: right;
+        margin-top: 40px;
+    }
+    /*导航条导航栏列表样式*/
+    .navbar-list ul {
+        list-style: none;
+    }
+    .navbar-list ul li {
+        width: 100px;
+        height: 30px;
+        float: left;
+        cursor: pointer;
+        text-align: center;
+        line-height: 30px;
+    }
+    /*选中导航栏列表后的样式*/
+    .navbar-list ul li:hover {
+        background-color: #2ecc71;
+        width: 100px;
+        height: 30px;
+        border-radius: 10px;
+    }
+    .navbar-list ul li a {
+        text-decoration: none;
+        font-size: 14px;
+        color: #f9f9f9;
+        text-align: center;
+        line-height: 14px;
+    }
+    /*页面头部内容部分容器样式*/
+    .header-content {
+        height: 312px;
+    }
+    /*页面头部内容部分p标签样式*/
+    .header-content p {
+        width: 100%;
+        height: 40px;
+        font-size: 40px;
+        text-transform: uppercase;
+        color: #f9f9f9;
+        text-align: center;
+        line-height: 40px;
+        margin-top: 120px;
+    }
+    /*页面头部内容部分按钮样式*/
+    .header-content .button {
+        width: 100%;
+        height: 45px;
+    }
+    .header-content div a {
+        display: block;
+        width: 234px;
+        height: 45px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        background-color: #2ecc71;
+        font-size: 17px;
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+        text-align: center;
+        line-height: 45px;
+        position: relative;
+        left: 50%;
+        margin-left: -117px;
+        margin-top: 30px;
+    }
+    /*页面主体部分容器样式*/
+    .c-body {
+        background-color: #ffffff;
+    }
+    /*页面主体部分标题样式*/
+    .c-body h2 {
+        width: 100%;
+        height: 40px;
+        font-size: 25px;
+        color: #444;
+        line-height: 40px;
+        text-align: center;
+        text-transform: capitalize;
+        margin-top: 50px;
+    }
+    /*页面主体标题下图片样式*/
+    #pic1 {
+        width: 100%;
+        height: 54px;
+    }
+    #pic1 img {
+        position: relative;
+        left: 50%;
+        margin-left: -26px;
+        width: 53px;
+        height: 14px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .c-body h4 {
+        width: 100%;
+        height: 70px;
+        line-height: 40px;
+        text-align: center;
+        text-transform: capitalize;
+        margin: 20px 0 20px 0;
+        font-size: 12px;
+        color: #444;
+    }
+    /*工作范例小标题样式*/
+    .work h2 {
+        width: 100%;
+        height: 40px;
+        font-size: 25px;
+        line-height: 40px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 150px;
+        color: #7f8c8d;
+        ;
+    }
+    /*工作范例容器样式*/
+    .work-pic {
+        width: 90%;
+        height: 564px;
+        padding: 0 5% 0 5%;
+    }
+    /*工作范例图片容器样式*/
+    .work-pic div {
+        display: inline-block;
+        width: 47.5%;
+        height: 272px;
+        float: left;
+        background-color: #449d44;
+    }
+    /*pic-1-1至pic-2-2为四个工作范例图片*/
+    .pic-1-1 {
+        background: url("layer-8.png");
+        background-position: center center;
+        margin-right: 2.5%;
+        margin-bottom: 2.5%;
+    }
+    .pic-1-2 {
+        background: url("layer-9.png");
+        background-position: center center;
+        margin-left: 2.5%;
+        margin-bottom: 2.5%;
+    }
+    .pic-2-1 {
+        background: url("layer-10.png");
+        background-position: center center;
+        margin-right: 2.5%;
+        margin-top: 2.5%;
+    }
+    .pic-2-2 {
+        background: url("layer-11.png");
+        background-position: center center;
+        margin-left: 2.5%;
+        margin-top: 2.5%;
+    }
+    /*查看更多按钮样式*/
+    .work .button {
+        width: 100%;
+    }
+    .work .button a {
+        display: block;
+        width: 217px;
+        height: 36px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        background-color: #ecf0f1;
+        border: solid 2px #444;
+        text-align: center;
+        line-height: 36px;
+        text-decoration: none;
+        position: relative;
+        left: 50%;
+        margin-left: -108px;
+        margin-top: 100px;
+        color: #34495e;
+        font-size: 14px;
+    }
+    /*合作伙伴样式*/
+    .worked-with {
+        padding: 0 5% 0 5%;
+        height: 100px;
+        width: 90%;
+    }
+    .worked-with p {
+        text-align: center;
+        margin-top: 200px;
+        font-size: 25px;
+        color: #7f8c8d;
+        text-transform: capitalize;
+    }
+    .worked-with div {
+        width: 100%;
+        height: 75px;
+    }
+    .worked-with img {
+        display: block;
+        width: 700px;
+        height: 50px;
+        text-align: center;
+        position: relative;
+        left: 50%;
+        margin-left: -350px;
+        margin-top: 50px;
+    }
+    /*页面尾部样式*/
+    .footer {
+        width: 100%;
+        height: 100px;
+        background-color: #444444;
+        margin-top: 100px;
+    }
+    /*社交网站样式*/
+    .social {
+        font-size: 16px;
+        color: #f9f9f9;
+        padding: 0 5% 0 5%;
+        float: left;
+        margin-top: 42px;
+    }
+    .social span {
+        margin: 0 10px 0 10px;
+    }
+    /*版权信息样式*/
+    .copyright {
+        font-size: 12px;
+        color: #f9f9f9;
+        float: right;
+        margin-top: 42px;
+        padding: 0 5% 0 5%;
+    }
+}
+
+
+/*当页面宽度大于1024时显示的样式*/
+
+@media only screen and (min-width: 1024px) {
+    .header,
+    .c-body,
+    .footer {
+        display: none;
+    }
+    #warning {
+        text-align: center;
+        vertical-align: middle;
+    }
+}

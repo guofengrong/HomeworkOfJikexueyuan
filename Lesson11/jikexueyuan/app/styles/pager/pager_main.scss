@@ -1,0 +1,301 @@
+/*.main下包含了左侧课程分类导航条、中部的海报轮播以及右侧的关于计科学院的介绍部分的样式设置；*/
+
+$niceGreen: #35b558;
+$normalColor: #e4e4e4;
+@mixin border($width:1px, $color:#e4e4e4) {
+    border: $width solid $color;
+}
+
+@mixin border-left($width:1px, $color:#e4e4e4) {
+    border-left: $width solid $color;
+}
+
+@mixin border-right($width:1px, $color:#e4e4e4) {
+    border-right: $width solid $color;
+}
+
+@mixin border-top($width:1px, $color:#e4e4e4) {
+    border-top: $width solid $color;
+}
+
+@mixin border-bottom($width:1px, $color:#e4e4e4) {
+    border-bottom: $width solid $color;
+}
+
+@mixin boxSize($boxWidth, $boxHeight) {
+    width: $boxWidth;
+    height: $boxHeight;
+}
+
+.main {
+    position: relative;
+    @include boxSize(1000px, 307px);
+}
+
+.lesson-classify-nav {
+    position: relative;
+    float: left;
+    @include boxSize(210px, 305px);
+    @include border-top(2px, $niceGreen);
+    ul {
+        position: relative;
+        @include boxSize(208px, 305px);
+        @include border();
+        border-bottom: 0;
+        border-top: 0;
+        background-color: #ffffff;
+        overflow: hidden;
+        z-index: 800;
+    }
+    li {
+        display: inline-block;
+        @include boxSize(178px, 37px);
+        padding: 0 15px;
+        @include border-bottom();
+        font-size: 13px;
+        color: #333;
+        text-align: left;
+        line-height: 37px;
+        list-style: none;
+        cursor: pointer;
+        i {
+            position: relative;
+            float: right;
+            top: 8px;
+            font-size: 21px;
+            color: #5e5e5e;
+        }
+    }
+}
+
+.lesson-list-show {
+    position: absolute;
+    left: 210px;
+    top: -1px;
+    display: none;
+    min-height: 417px;
+    @include boxSize(400px, 417px);
+    @include border();
+    border-left: 0;
+    background-color: #ffffff;
+    z-index: 800;
+}
+
+.title1 {
+    height: 37px;
+    line-height: 37px;
+    @include border-bottom(1px, #f5f5f5);
+    margin: 0 10px;
+    padding-left: 7px;
+    a {
+        color: #333;
+        font-size: 13px;
+        font-weight: bold;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+.lesson {
+    height: 37px;
+    margin: 0 10px;
+    a {
+        @include boxSize(auto, 14px);
+        line-height: 14px;
+        margin: 4px 0 10px 0;
+        padding: 0 7px;
+        @include border-right(1px, #e0e0e0);
+        display: inline-block;
+        color: #666;
+        font-weight: bold;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover {
+            color: $niceGreen;
+        }
+    }
+}
+
+.poster-viewer {
+    position: relative;
+    @include boxSize(570px, 305px);
+    float: left;
+    margin-left: 10px;
+    @include border();
+    border-right: 0;
+    z-index: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.arrow-left {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    @include boxSize(40px, 50px);
+    margin-top: -25px;
+    z-index: 800;
+    cursor: pointer;
+    background: url("../images/other/banner-left_fe0df34.png") -10px -5px no-repeat;
+    &:hover {
+        background: url("../images/other/banner-left_fe0df34.png") -10px -65px no-repeat;
+    }
+}
+
+.arrow-right {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    @include boxSize(40px,
+    50px);
+    margin-top: -25px;
+    z-index: 800;
+    cursor: pointer;
+    background: url("../images/other/banner-right_a0bdd7d.png") -10px -5px no-repeat;
+    &:hover {
+        background: url("../images/other/banner-right_a0bdd7d.png") -10px -65px no-repeat;
+    }
+}
+
+.poster-wrapper {
+    position: absolute;
+    @include boxSize(3414px,
+    305px);
+    a {
+        display: inline-block;
+        float: left;
+        cursor: pointer;
+    }
+}
+
+.pagination {
+    position: absolute;
+    left: 0;
+    text-align: center;
+    bottom: 15px;
+    width: 100%;
+    z-index: 800;
+}
+
+.pagination-switch {
+    display: inline-block;
+    background-color: #fff;
+    @include boxSize(32px,
+    2px);
+    margin: 0 6px;
+    cursor: pointer;
+    &:hover {
+        background-color: $niceGreen;
+    }
+}
+
+.lesson-right-show {
+    float: left;
+    @include boxSize(207px,
+    305px);
+    @include border();
+}
+
+.box1 {
+    @include boxSize(auto,
+    152px);
+    @include border-bottom();
+    a {
+        padding: 20px;
+        display: block;
+        cursor: pointer;
+        h2 {
+            font-size: 15px;
+            color: #666;
+            font-weight: normal;
+        }
+        p {
+            position: relative;
+            color: $niceGreen;
+            font-size: 12px;
+            margin: 15px auto;
+            line-height: 21px;
+            span {
+                display: inline-block;
+                padding: 5px;
+                padding-left: 0;
+            }
+        }
+        ul {
+            list-style: none;
+            li {
+                position: relative;
+                color: $niceGreen;
+                font-size: 12px;
+                margin: 15px auto;
+                line-height: 21px;
+            }
+        }
+    }
+}
+
+.line2 {
+    position: relative;
+    top: 3px;
+    @inlcude boxSize(auto,
+    5px);
+    @include border-right(2px,
+    $niceGreen);
+    margin-right: 5px;
+}
+
+.btn-learn-more1 {
+    position: relative;
+    top: -10px;
+    @include boxSize(168px,
+    34px);
+    border: 0;
+    line-height: 34px;
+    font-size: 14px;
+    font-family: 'Microsoft Yahei';
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #7bda95;
+    color: #ffffff;
+    outline: none;
+    transition: background-color .5s;
+    -moz-transition: background-color .5s;
+    /* Firefox 4 */
+    -webkit-transition: background-color .5s;
+    /* Safari and Chrome */
+    -o-transition: background-color .5s;
+    /* Opera */
+    &:hover {
+        background-color: #009900;
+    }
+}
+
+.btn-learn-more2 {
+    position: relative;
+    top: -5px;
+    @include boxSize(166px,
+    32px);
+    @include border(1px,
+    #7bda95);
+    line-height: 34px;
+    font-size: 14px;
+    font-family: 'Microsoft Yahei';
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #7bda95;
+    outline: none;
+    transition: border-color, 1s, color, 1s, background-color 1s;
+    -moz-transition: border-color, 1s, color, 1s, background-color 1s;
+    /* Firefox 4 */
+    -webkit-transition: border-color, 1s, color, 1s, background-color 1s;
+    /* Safari and Chrome */
+    -o-transition: border-color, 1s, color, 1s, background-color 1s;
+    /* Opera */
+    &:hover {
+        border-color: #009900;
+        color: #ffffff;
+        background-color: #009900;
+    }
+}

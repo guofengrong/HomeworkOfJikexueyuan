@@ -1,0 +1,1303 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0; }
+
+html,
+body {
+  height: 100%;
+  font-family: 'Microsoft Yahei'; }
+
+/*最外层包裹样式*/
+.container {
+  height: 100%;
+  min-width: 1000px; }
+
+/*头部样式：
+1、.logo、.logo img设置网站logo样式；
+2、.search、.btn-search设置搜索框及按钮的样式；
+3、.login-box下包含了登陆后消息显示、用户名、用户名下拉菜单、我的课程等样式
+4、
+*/
+.header-wrapper {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  padding: 10px 0 10px 0; }
+
+.header {
+  position: absolute;
+  left: 50%;
+  margin-left: -500px;
+  width: 1000px;
+  height: 50px; }
+
+.logo {
+  display: inline-block;
+  float: left;
+  cursor: pointer; }
+  .logo img {
+    width: 113px;
+    height: auto;
+    margin-top: 5px; }
+
+.search {
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  margin-left: -189px;
+  box-sizing: border-box;
+  width: 380px;
+  height: 38px;
+  border: 1px solid #e4e4e4; }
+
+.input-content {
+  float: left;
+  width: 310px;
+  height: 18px;
+  padding: 9px 15px;
+  border: 0;
+  outline: none; }
+
+.btn-search {
+  position: relative;
+  left: 0;
+  float: left;
+  box-sizing: border-box;
+  width: 38px;
+  height: 36px;
+  border: 0;
+  border-left: 1px solid #dfdfdf;
+  color: #6d6d6d;
+  font-size: 18px;
+  background-color: #ffffff;
+  cursor: pointer; }
+  .btn-search:hover {
+    background: #35b558;
+    color: #ffffff; }
+
+.login-box {
+  position: relative;
+  float: right;
+  width: 211px;
+  height: 50px;
+  font-size: 12px;
+  color: #333;
+  line-height: 50px;
+  display: inline-block; }
+
+.my-message {
+  float: left;
+  width: 12px;
+  height: 12px;
+  padding: 19px 0 19px 0;
+  display: inline-block;
+  color: #333;
+  font-size: 12px;
+  cursor: pointer; }
+
+.message-box-wrapper {
+  position: absolute;
+  top: 45px;
+  left: -52px;
+  width: 298px;
+  height: 178px;
+  border: 1px solid #e4e4e4;
+  box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  cursor: pointer;
+  z-index: 800;
+  display: none; }
+  .message-box-wrapper h3 {
+    width: 268px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+    border-bottom: 1px solid #e4e4e4;
+    font-size: 12px;
+    font-weight: bold; }
+
+.message-box {
+  width: 298px;
+  height: 120px;
+  line-height: 120px;
+  background-color: #ffffff;
+  text-align: center; }
+  .message-box a {
+    display: block;
+    width: 298px;
+    height: 120px;
+    line-height: 120px;
+    text-decoration: none;
+    color: #666;
+    text-align: center; }
+
+.top-icon {
+  position: absolute;
+  top: -8px;
+  left: 50px;
+  width: 15px;
+  height: auto; }
+
+.nonews-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -69.5px;
+  margin-top: -10px;
+  display: block;
+  width: 139px;
+  height: 20px; }
+
+.check-all-message {
+  display: block;
+  width: 298px;
+  height: 24px;
+  border-top: 1px solid #e4e4e4;
+  text-align: center;
+  line-height: 25px;
+  color: #333;
+  cursor: pointer;
+  text-decoration: none; }
+
+.line1 {
+  float: left;
+  width: 0;
+  height: 12px;
+  border: 1px solid #333;
+  margin: 19px 5px 19px 5px;
+  display: inline-block; }
+
+.login-box-a {
+  float: left;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer; }
+  .login-box-a img {
+    position: relative;
+    top: -1px;
+    width: 40px;
+    height: auto;
+    padding: 19px 0 19px 0; }
+
+.user-menu {
+  float: left;
+  width: auto;
+  height: 50px;
+  line-height: 50px; }
+  .user-menu a {
+    position: relative;
+    top: 1px;
+    color: #35b558;
+    text-decoration: none;
+    font-size: 13px; }
+  .user-menu .icon-play3 {
+    position: relative;
+    display: inline-block;
+    transition: transform .5s;
+    -o-transisiton: transform .5s;
+    -moz-transisiton: transform .5s;
+    -webkit-transisiton: transform .5s; }
+
+.pull-down-menu {
+  position: absolute;
+  top: 40px;
+  left: 110px;
+  width: 92px;
+  height: 234px;
+  padding: 8px 0;
+  border: 1px solid #e4e4e4;
+  background-color: #ffffff;
+  z-index: 800;
+  display: none; }
+  .pull-down-menu img {
+    position: absolute;
+    top: -8px;
+    left: 38px;
+    width: 15px;
+    height: auto; }
+  .pull-down-menu ul, .pull-down-menu .lesson-nav li, .lesson-nav .pull-down-menu li {
+    list-style: none; }
+  .pull-down-menu li {
+    width: 92px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center; }
+  .pull-down-menu a {
+    display: block;
+    width: 64px;
+    height: 26px;
+    padding: 0 14px;
+    font-size: 12px;
+    text-align: left;
+    text-decoration: none;
+    color: #666; }
+    .pull-down-menu a:hover {
+      background-color: #e4e4e4;
+      color: #35b558; }
+
+.rotate-180 {
+  transform: rotate(180deg); }
+
+/*横向导航栏上方彩色渐变色条的样式*/
+.loading {
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, 10% 10%, 100% 100%, color-stop(0.14, #35b550), color-stop(0.5, #8aca8c), color-stop(1, #2d85ca)); }
+
+/*横向导航栏的样式：
+1、ul包含了左侧导航条的样式
+2、.user-need下包含了vip会员、求课程、客户端的样式*/
+.nav-wrapper {
+  position: relative;
+  width: 100%;
+  height: 43px;
+  border-bottom: 1px solid #e8e8e8;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 5px; }
+
+.nav {
+  position: absolute;
+  left: 50%;
+  margin-left: -500px;
+  width: 1000px;
+  height: 41px; }
+  .nav ul, .nav .lesson-nav li, .lesson-nav .nav li, .nav li {
+    float: left;
+    list-style: none; }
+    .nav ul a, .nav .lesson-nav li a, .lesson-nav .nav li a, .nav li a {
+      width: auto;
+      height: 410x;
+      line-height: 41px;
+      padding: 0 22px;
+      display: inline-block;
+      font-size: 14px;
+      color: #333;
+      text-decoration: none;
+      cursor: pointer; }
+      .nav ul a:hover, .nav .lesson-nav li a:hover, .lesson-nav .nav li a:hover, .nav li a:hover {
+        color: niceGreen; }
+
+.user-need {
+  float: right; }
+  .user-need a {
+    margin-left: 20px;
+    width: auto;
+    height: 41px;
+    line-height: 41px;
+    display: inline-block;
+    font-size: 12px;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer; }
+    .user-need a:hover {
+      color: niceGreen; }
+    .user-need a img {
+      position: relative;
+      top: 2px;
+      display: inline-block;
+      margin-right: 5px; }
+
+/*页面主体部分的样式设置：
+1、该文件是主入口，将其下的其他scss文件引入本文件中；
+2、.pager-wrapper是页面主体的外层包裹；
+3、.main下包含了左侧课程分类导航条、中部的海报轮播以及右侧的关于计科学院的介绍部分的样式设置；
+*/
+.pager-wrapper {
+  position: relative;
+  width: 100%;
+  height: 3121px;
+  margin-top: 20px; }
+
+.pager {
+  position: absolute;
+  left: 50%;
+  margin-left: -500px;
+  width: 1000px;
+  height: 3121px; }
+
+/*.main下包含了左侧课程分类导航条、中部的海报轮播以及右侧的关于计科学院的介绍部分的样式设置；*/
+.main {
+  position: relative;
+  width: 1000px;
+  height: 307px; }
+
+.lesson-classify-nav {
+  position: relative;
+  float: left;
+  width: 210px;
+  height: 305px;
+  border-top: 2px solid #35b558; }
+  .lesson-classify-nav ul, .lesson-classify-nav .lesson-nav li, .lesson-nav .lesson-classify-nav li {
+    position: relative;
+    width: 208px;
+    height: 305px;
+    border: 1px solid #e4e4e4;
+    border-bottom: 0;
+    border-top: 0;
+    background-color: #ffffff;
+    overflow: hidden;
+    z-index: 800; }
+  .lesson-classify-nav li {
+    display: inline-block;
+    width: 178px;
+    height: 37px;
+    padding: 0 15px;
+    border-bottom: 1px solid #e4e4e4;
+    font-size: 13px;
+    color: #333;
+    text-align: left;
+    line-height: 37px;
+    list-style: none;
+    cursor: pointer; }
+    .lesson-classify-nav li i {
+      position: relative;
+      float: right;
+      top: 8px;
+      font-size: 21px;
+      color: #5e5e5e; }
+
+.lesson-list-show {
+  position: absolute;
+  left: 210px;
+  top: -1px;
+  display: none;
+  min-height: 417px;
+  width: 400px;
+  height: 417px;
+  border: 1px solid #e4e4e4;
+  border-left: 0;
+  background-color: #ffffff;
+  z-index: 800; }
+
+.title1 {
+  height: 37px;
+  line-height: 37px;
+  border-bottom: 1px solid #f5f5f5;
+  margin: 0 10px;
+  padding-left: 7px; }
+  .title1 a {
+    color: #333;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer; }
+
+.lesson {
+  height: 37px;
+  margin: 0 10px; }
+  .lesson a {
+    width: auto;
+    height: 14px;
+    line-height: 14px;
+    margin: 4px 0 10px 0;
+    padding: 0 7px;
+    border-right: 1px solid #e0e0e0;
+    display: inline-block;
+    color: #666;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer; }
+    .lesson a:hover {
+      color: #35b558; }
+
+.poster-viewer {
+  position: relative;
+  width: 570px;
+  height: 305px;
+  float: left;
+  margin-left: 10px;
+  border: 1px solid #e4e4e4;
+  border-right: 0;
+  z-index: 0;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.arrow-left {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 40px;
+  height: 50px;
+  margin-top: -25px;
+  z-index: 800;
+  cursor: pointer;
+  background: url("../images/other/banner-left_fe0df34.png") -10px -5px no-repeat; }
+  .arrow-left:hover {
+    background: url("../images/other/banner-left_fe0df34.png") -10px -65px no-repeat; }
+
+.arrow-right {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 40px;
+  height: 50px;
+  margin-top: -25px;
+  z-index: 800;
+  cursor: pointer;
+  background: url("../images/other/banner-right_a0bdd7d.png") -10px -5px no-repeat; }
+  .arrow-right:hover {
+    background: url("../images/other/banner-right_a0bdd7d.png") -10px -65px no-repeat; }
+
+.poster-wrapper {
+  position: absolute;
+  width: 3414px;
+  height: 305px; }
+  .poster-wrapper a {
+    display: inline-block;
+    float: left;
+    cursor: pointer; }
+
+.pagination {
+  position: absolute;
+  left: 0;
+  text-align: center;
+  bottom: 15px;
+  width: 100%;
+  z-index: 800; }
+
+.pagination-switch {
+  display: inline-block;
+  background-color: #fff;
+  width: 32px;
+  height: 2px;
+  margin: 0 6px;
+  cursor: pointer; }
+  .pagination-switch:hover {
+    background-color: #35b558; }
+
+.lesson-right-show {
+  float: left;
+  width: 207px;
+  height: 305px;
+  border: 1px solid #e4e4e4; }
+
+.box1 {
+  width: auto;
+  height: 152px;
+  border-bottom: 1px solid #e4e4e4; }
+  .box1 a {
+    padding: 20px;
+    display: block;
+    cursor: pointer; }
+    .box1 a h2 {
+      font-size: 15px;
+      color: #666;
+      font-weight: normal; }
+  .box1 p {
+    position: relative;
+    color: #35b558;
+    font-size: 12px;
+    margin: 15px auto;
+    line-height: 21px; }
+    .box1 p span {
+      display: inline-block;
+      padding: 5px;
+      padding-left: 0; }
+  .box1 a ul {
+    list-style: none;
+  }
+  .box1 a ul li {
+    position: relative;
+        color: #35b558;
+        font-size: 12px;
+        margin: 15px auto;
+        line-height: 21px;
+  }
+
+.line2 {
+  position: relative;
+  top: 3px;
+  @inlcude boxSize(auto,5px);
+  border-right: 2px solid #35b558;
+  margin-right: 5px; }
+
+.btn-learn-more1 {
+  position: relative;
+  top: -10px;
+  width: 168px;
+  height: 34px;
+  border: 0;
+  line-height: 34px;
+  font-size: 14px;
+  font-family: 'Microsoft Yahei';
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: #7bda95;
+  color: #ffffff;
+  outline: none;
+  transition: background-color .5s;
+  -moz-transition: background-color .5s;
+  /* Firefox 4 */
+  -webkit-transition: background-color .5s;
+  /* Safari and Chrome */
+  -o-transition: background-color .5s;
+  /* Opera */ }
+  .btn-learn-more1:hover {
+    background-color: #009900; }
+
+.btn-learn-more2 {
+  position: relative;
+  top: -5px;
+  width: 166px;
+  height: 32px;
+  border: 1px solid #7bda95;
+  line-height: 34px;
+  font-size: 14px;
+  font-family: 'Microsoft Yahei';
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #7bda95;
+  outline: none;
+  transition: border-color, 1s, color, 1s, background-color 1s;
+  -moz-transition: border-color, 1s, color, 1s, background-color 1s;
+  /* Firefox 4 */
+  -webkit-transition: border-color, 1s, color, 1s, background-color 1s;
+  /* Safari and Chrome */
+  -o-transition: border-color, 1s, color, 1s, background-color 1s;
+  /* Opera */ }
+  .btn-learn-more2:hover {
+    border-color: #009900;
+    color: #ffffff;
+    background-color: #009900; }
+
+/*详细的课程分类显示部分：
+1、.lesson-nav设置了横向导航条的样式
+2、.lesson-list li及其中包含的类选择器设置了单个课程的样式，包括鼠标悬停后出现的蒙版、播放按钮、插入的课程介绍等*/
+.hot-lesson-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 30px; }
+
+.lesson-nav {
+  position: relative;
+  width: 1000px;
+  height: 41px; }
+  .lesson-nav ul, .lesson-nav li {
+    float: left;
+    list-style: none; }
+  .lesson-nav li {
+    position: relative;
+    width: 166px;
+    height: 19px;
+    padding: 10px 0;
+    border-bottom: 2px solid #e4e4e4;
+    color: #666;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer; }
+  .lesson-nav .icon-play3 {
+    position: absolute;
+    top: 28px;
+    left: 83px;
+    margin-left: -6px;
+    color: #35b558;
+    /*display: none;*/ }
+
+#lesson-nav-first {
+  color: #35b558;
+  border-bottom: 2px solid #35b558; }
+
+.lesson-list-wrapper {
+  width: 1000px;
+  height: 480px;
+  margin-top: 20px; }
+
+.lesson-list ul, .lesson-list .lesson-nav li, .lesson-nav .lesson-list li {
+  width: 1100px; }
+
+.recommendation, .new, .free, .practice, .first-publish, .cooperation {
+  display: none; }
+
+.lesson-list li {
+  position: relative;
+  float: left;
+  width: 235px;
+  height: 220px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  list-style: none; }
+
+.lesson-box {
+  width: 235px;
+  height: 218px; }
+  .lesson-box a img {
+    width: 233px;
+    height: 129px; }
+
+.box-mouseover {
+  position: absolute;
+  width: 233px;
+  height: 129px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: none; }
+
+.icon-heart {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer; }
+  .icon-heart:hover {
+    color: #35b558; }
+
+.icon-play2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
+  display: block;
+  font-size: 40px;
+  color: #808080;
+  cursor: pointer; }
+
+.lesson-img {
+  display: block;
+  width: 233px;
+  height: 129px;
+  border: 1px solid #e4e4e4;
+  border-bottom: 0; }
+
+.lesson-info-box {
+  position: relative;
+  width: 213px;
+  height: 67px;
+  padding: 10px;
+  border: 1px solid #e4e4e4;
+  border-top: 0;
+  background-color: #ffffff;
+  z-index: 200; }
+
+.title2 {
+  width: 213px;
+  height: 36px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  text-align: left;
+  color: #333;
+  line-height: 18px;
+  cursor: pointer; }
+  .title2 a {
+    border: 0;
+    text-decoration: none;
+    color: #333; }
+
+.lesson-info {
+  color: #808080;
+  height: 0;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  /*display: none;*/ }
+
+.title3 {
+  width: 213px;
+  height: 24px; }
+  .title3 span {
+    float: left;
+    color: #808080;
+    font-size: 12px;
+    text-align: left;
+    vertical-align: top; }
+  .title3 a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    float: right;
+    border: 0;
+    cursor: pointer; }
+    .title3 a img {
+      float: right;
+      display: inline-block;
+      width: 16px;
+      height: 16px; }
+  .title3 em {
+    float: right;
+    display: inline-block;
+    font-size: 12px;
+    color: #808080; }
+
+/*职业路径图样式设置:
+1、.learn-card-wrapper设置职业路径图外层样式；
+2、.learn-card及其子元素设置了单个学习卡片的样式
+*/
+.career-path-wrapper {
+  position: relative;
+  width: 100%;
+  height: 641px;
+  margin-top: 20px; }
+
+.title4 {
+  width: 1000px;
+  height: 25px;
+  line-height: 25px;
+  margin-bottom: 16px; }
+
+.title4-a {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer; }
+
+.more {
+  float: right;
+  font-size: 12px;
+  font-weight: normal;
+  color: #2D85CA;
+  text-decoration: none;
+  cursor: pointer; }
+
+.icon-question {
+  position: relative;
+  color: #808080;
+  font-size: 14px; }
+
+.learn-card-wrapper {
+  position: relative;
+  width: 1002px; }
+
+.learn-card {
+  float: left;
+  width: 199px;
+  height: 298px;
+  border: 1px solid #e4e4e4;
+  border-right: 0; }
+  .learn-card a {
+    display: block;
+    width: 199px;
+    height: 298px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center; }
+    .learn-card a img {
+      width: 199px;
+      height: 120px;
+      margin-bottom: 24px; }
+    .learn-card a h2 {
+      font-size: 15px;
+      color: #333;
+      margin-bottom: 20px;
+      height: 18px; }
+    .learn-card a p {
+      width: 199px;
+      height: 20px;
+      font-size: 12px;
+      color: #666;
+      line-height: 20px; }
+    .learn-card a button {
+      width: 138px;
+      height: 32px;
+      line-height: 32px;
+      margin-top: 20px;
+      border: 1px solid #35b558;
+      color: #35b558;
+      font-family: 'Microsoft Yahei';
+      font-size: 16px;
+      text-align: center;
+      cursor: pointer;
+      background-color: #ffffff;
+      outline: none;
+      transition: background-color 1s, color 1s;
+      -moz-transition: background-color 1s, color 1s;
+      -webkit-transition: background-color 1s, color 1s;
+      -o-transition: background-color 1s, color 1s; }
+      .learn-card a button:hover {
+        background-color: #35b558;
+        color: #ffffff; }
+
+.last {
+  border-right: 1px solid #e4e4e4; }
+
+/*知识体系图样式：
+1、.system-wrapper设置外层样式
+2、.system-box a设置单个标签的样式
+3、其中.front是鼠标未悬停其上时显示的界面，.back是鼠标悬停其上时显示的界面*/
+.system-wrapper {
+  position: relative;
+  width: 100%;
+  height: 522px;
+  margin-top: 40px; }
+
+.system-box {
+  width: 1002px;
+  height: 480px;
+  border-right: 1px solid #e4e4e4; }
+  .system-box a {
+    position: relative;
+    display: block;
+    float: left;
+    width: 166px;
+    height: 119px;
+    border: 1px solid #e4e4e4;
+    border-right: 0;
+    border-bottom: 0;
+    text-decoration: none;
+    text-align: center;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d; }
+
+.front {
+  position: absolute;
+  float: left;
+  display: block;
+  width: 165px;
+  height: 89px;
+  border-bottom: 1px solid #e4e4e4;
+  padding: 15px 0;
+  text-align: center;
+  cursor: pointer;
+  transition: transform .5s; }
+  .front img {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+    z-index: 200; }
+  .front h2 {
+    width: 167px;
+    height: 18px;
+    margin-bottom: 5px;
+    line-height: 18px;
+    color: #333;
+    font-size: 15px;
+    font-weight: bold; }
+  .front span {
+    color: #35b558;
+    font-size: 14px;
+    text-align: center; }
+
+.back {
+  position: absolute;
+  display: block;
+  float: left;
+  padding-top: 30px;
+  width: 100%;
+  height: 89px;
+  text-align: center;
+  background-color: #f5f5f5;
+  /*display: none;*/
+  transition: transform .5s;
+  transform: rotateY(90deg);
+  /*z-index: 300;*/ }
+  .back span {
+    display: block;
+    width: 167px;
+    height: 19px;
+    line-height: 19px;
+    margin-bottom: 10px;
+    color: #666;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none; }
+  .back button {
+    display: inline-block;
+    width: 140px;
+    height: 36px;
+    border: 0;
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #35b558;
+    cursor: pointer;
+    transition: background-color 1s;
+    -moz-transition: background-color 1s;
+    -webkit-transition: background-color 1s;
+    -o-transition: background-color 1s; }
+    .back button:hover {
+      background-color: #7bda95; }
+
+/*1、.wiki-box-wrapper设置wiki部分外层包裹；
+  2、.wiki-box设置单个书本的样式；
+*/
+.wiki-wrapper {
+  position: relative;
+  width: 100%;
+  height: 443px;
+  margin-top: 40px; }
+
+.wiki-box {
+  float: left;
+  width: 301.297px;
+  height: 338px;
+  padding: 15px;
+  border: 1px solid #e4e4e4;
+  border-right: 0; }
+  .wiki-box h2 {
+    font-size: 14px;
+    font-weight: bold; }
+  .wiki-box ul, .wiki-box .lesson-nav li, .lesson-nav .wiki-box li {
+    margin-top: 10px;
+    list-style: none; }
+
+.wiki-img {
+  width: 301.297px;
+  height: 249px;
+  margin-top: 10px; }
+  .wiki-img a {
+    display: block;
+    float: left;
+    width: 142px;
+    height: 249px;
+    /*margin-right: 15px;*/
+    text-decoration: none;
+    cursor: pointer; }
+    .wiki-img a h3 {
+      font-weight: normal;
+      font-size: 13px;
+      color: #333;
+      height: 13px;
+      line-height: 13px;
+      margin: 10px auto;
+      text-align: center; }
+    .wiki-img a span {
+      display: block;
+      height: 16px;
+      font-size: 12px;
+      color: #999;
+      line-height: 16px;
+      text-align: center; }
+  .wiki-img img {
+    border-radius: 5px; }
+
+.margin-left-15 {
+  margin-left: 15px; }
+
+.wiki-info-list {
+  float: left;
+  width: 100%;
+  font-size: 12px;
+  color: #999;
+  line-height: 12px;
+  margin-bottom: 8px; }
+  .wiki-info-list a {
+    color: #999;
+    text-decoration: none; }
+  .wiki-info-list p {
+    float: left;
+    color: #999;
+    text-decoration: none; }
+
+.title6 {
+  float: right; }
+
+#wiki-box-last {
+  border-right: 1px solid #e4e4e4; }
+
+/*.partner、.university、.media用于设置战略合作伙伴、合作院校、媒体报道的样式*/
+.partner-wrapper {
+  position: relative;
+  width: 100%; }
+
+.partner {
+  position: relative;
+  width: 960px;
+  height: 48px;
+  padding: 20px;
+  border: 1px solid #e4e4e4; }
+
+.partner-swiper-container {
+  position: relative;
+  width: 950px;
+  height: 50px;
+  overflow: hidden;
+  white-space: nowrap; }
+
+.partner-box {
+  position: absolute;
+  height: 50px; }
+  .partner-box a {
+    display: inline-block;
+    width: 150px;
+    margin-right: 5px;
+    cursor: pointer; }
+    .partner-box a img {
+      width: 148px;
+      height: 48px;
+      border: 1px solid #e4e4e4; }
+
+.university-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 40px; }
+
+.university {
+  position: relative;
+  width: 958px;
+  height: 110px;
+  padding: 20px;
+  border: 1px solid #e4e4e4; }
+
+.university-swiper-container {
+  position: relative;
+  width: 958px;
+  height: 110px;
+  overflow: hidden;
+  white-space: nowrap; }
+
+.university-box {
+  position: absolute;
+  height: 110px; }
+  .university-box a {
+    cursor: pointer; }
+    .university-box a img {
+      width: 110px;
+      height: 110px;
+      margin-right: 25px; }
+
+.media-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 40px; }
+
+.media {
+  position: relative;
+  width: 958px;
+  height: 50px;
+  padding: 20px;
+  border: 1px solid #e4e4e4; }
+
+.media-swiper-container {
+  position: relative;
+  width: 958px;
+  height: 50px;
+  overflow: hidden;
+  white-space: nowrap; }
+
+.media-box {
+  position: absolute;
+  height: 50px; }
+  .media-box a {
+    cursor: pointer; }
+    .media-box a img {
+      width: 148px;
+      height: 48px;
+      border: 1px solid #e4e4e4;
+      margin-right: 10px; }
+
+/*尾部样式设置*/
+.footer-wrapper {
+  position: relative;
+  width: 100%;
+  height: 251px;
+  margin-top: 50px;
+  border: 1px solid #e4e4e4;
+  background-color: #fafafa; }
+
+.footer {
+  position: absolute;
+  left: 50%;
+  margin-left: -500px; }
+
+.jk-info {
+  width: 1000px;
+  height: 251px; }
+
+.jk-info-box {
+  float: left;
+  width: 154px;
+  height: 175px;
+  padding-left: 30px;
+  margin-top: 25px;
+  border-left: 1px solid #e4e4e4; }
+  .jk-info-box h2 {
+    font-size: 14px;
+    color: #666;
+    font-weight: normal;
+    cursor: pointer; }
+    .jk-info-box h2:hover {
+      color: #35b558; }
+
+.jk-info-list {
+  list-style: none; }
+  .jk-info-list a {
+    display: block;
+    width: 154px;
+    height: 16px;
+    line-height: 16px;
+    margin-top: 10px;
+    font-size: 12px;
+    text-decoration: none;
+    color: #666;
+    cursor: pointer; }
+    .jk-info-list a:hover {
+      color: #35b558; }
+
+.search-share {
+  float: left;
+  width: 219px;
+  height: 206px;
+  padding: 20px 0 0 40px;
+  border-left: 1px solid #e4e4e4; }
+  .search-share h2 {
+    width: 219px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 15px;
+    color: #35b558;
+    margin-bottom: 15px;
+    font-weight: normal; }
+
+.app-download {
+  display: block;
+  width: 219px;
+  height: 43px;
+  cursor: pointer;
+  text-decoration: none; }
+  .app-download img {
+    display: inline-block;
+    float: left;
+    width: 21px;
+    height: 39px;
+    margin-right: 15px; }
+  .app-download strong {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 8px; }
+  .app-download p {
+    font-size: 14px;
+    color: #999; }
+
+.share {
+  width: 219px;
+  height: 32px;
+  margin-top: 15px; }
+  .share img {
+    float: left;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px; }
+
+.service-online {
+  width: 184px;
+  height: 40px;
+  margin-top: 15px; }
+  .service-online a {
+    text-decoration: none;
+    cursor: pointer; }
+    .service-online a img {
+      float: left;
+      width: 40px;
+      height: 40px; }
+    .service-online a h5 {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 2px;
+      padding-left: 10px; }
+    .service-online a p {
+      font-size: 12px;
+      color: #999;
+      padding-left: 10px; }
+
+.copyright {
+  width: 960px;
+  height: 16px;
+  padding: 20px;
+  line-height: 16px; }
+  .copyright p {
+    text-align: center;
+    color: #999;
+    font-size: 12px; }
+    .copyright p a {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer; }
+      .copyright p a:hover {
+        color: #35b558; }
+
+/*侧边浮动栏*/
+.float-bar {
+  position: fixed;
+  bottom: 140px;
+  right: -30px;
+  width: 143px;
+  height: 35px;
+  z-index: 800; }
+
+#back-to-top {
+  display: none; }
+
+.content {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border-bottom: 1px solid #e4e4e4;
+  background-color: #fafafa;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 35px; }
+
+.icon-arrow-up {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -10px;
+  margin-left: -10px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  color: #666; }
+
+.app-download2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -6px;
+  margin-top: -12px;
+  display: block;
+  width: 12px;
+  height: auto; }
+
+.questionnaire {
+  font-size: 12px;
+  color: #666;
+  text-decoration: none;
+  cursor: pointer; }
+
+.content .icon-bubble2 {
+  position: relative;
+  top: 5px;
+  display: block;
+  font-size: 12px; }
+
+.float-service-btn {
+  display: block;
+  width: 3px;
+  height: 35px;
+  line-height: 35px;
+  text-decoration: none;
+  text-align: center; }
+  .float-service-btn img {
+    display: inline-block;
+    margin-top: 2px;
+    margin-left: 4px;
+    width: 30px;
+    height: 30px; }
+
+.content-last {
+  border-bottom: 0; }
+
+/*用于设置html是否可见的*/
+.visible {
+  display: block; }
+
+.hidden {
+  display: none; }
+
+/*# sourceMappingURL=main.css.map */

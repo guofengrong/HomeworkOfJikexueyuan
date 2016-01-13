@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh" xml:lang="zh" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta content="text/html" charset="UTF-8" http-equiv="content-type">
+    <title>后台登陆界面</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/loginin.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="c_body">
+            <form class="sign-in">
+                <h2>Please sign in</h2>
+                <!--账号输入框-->
+                <div class="form-group input-group">
+                    <label for="input_username" class="sr-only">username</label>
+                    <span class="input-group-addon glyphicon glyphicon-user" id="userlogo"></span>
+                    <input type="text" class="form-control input-lg" id="input_username" aria-describedby="userlogo" placeholder="username">
+                </div>
+                <!--密码输入框-->
+                <div class="form-group input-group">
+                    <label for="input_password" class="sr-only">password</label>
+                    <span class="input-group-addon glyphicon glyphicon-pencil" id="passwordlogo"></span>
+                    <input type="text" class="form-control input-lg" id="input_password" aria-describedby="passwordlogo" placeholder="password">
+                </div>
+                <!--提交按钮-->
+                <button type="submit" class="btn btn-lg btn-primary btn-block" id="sign-in">登陆</button>
+            </form>
+        </div>
+        <!--页面尾部-->
+        <div class="footer">
+            <p>
+                copyright &copy; XXXX公司版权所有
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

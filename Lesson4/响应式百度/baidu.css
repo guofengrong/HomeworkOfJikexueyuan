@@ -1,0 +1,622 @@
+/*针对firefox的hack*/
+
+@-moz-document url-prefix() {
+    .textfile:focus {
+        outline-style: solid;
+        outline-color: #4791ff;
+        outline-width: thin;
+    }
+    .textfile {
+        position: relative;
+        top: 1px;
+        border-top: 1px solid #b6b6b6;
+        border-left: 1px solid #b6b6b6;
+        border-bottom: 1px solid #b6b6b6;
+    }
+}
+
+
+/*当屏幕宽度大于810px时采用的样式*/
+
+@media only screen and (min-width: 810px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    /*外部容器样式*/
+    .container {
+        min-width: 810px;
+        min-height: 600px;
+        height: 100%;
+        position: relative;
+        display: block;
+    }
+    /*在宽度大于810px时不显示的样式*/
+    .m-weather,
+    .mobile-logo,
+    .m-nav,
+    .plus-card,
+    .m-foot {
+        display: none;
+    }
+    /*头部样式*/
+    .pc-header {
+        width: 100%;
+    }
+    /*宽度大于810时导航栏的样式*/
+    .pc-nav {
+        width: 100%;
+        height: 24px;
+        text-align: right;
+        font: 12px arial;
+        font-weight: bold;
+        background-color: #ffffff;
+        padding-top: 20px;
+        line-height: 24px;
+    }
+    /*导航栏中a标签的样式*/
+    .pc-nav a {
+        margin-left: 20px;
+        color: black;
+    }
+    /*去掉登陆与设置的加粗*/
+    #login {
+        font-weight: normal;
+    }
+    #configure {
+        font-weight: normal;
+    }
+    /*更多产品的样式*/
+    .more_product {
+        width: 60px;
+        height: 23px;
+        background-color: #38f;
+        border: 0;
+        color: white;
+        font: 12px arial;
+        margin-left: 19px;
+        margin-right: 20px;
+    }
+    /*主体部分容器样式*/
+    .c_body {
+        width: 100%;
+        height: 382px;
+        text-align: center;
+        background-color: transparent;
+        position: relative;
+        top: 20%;
+    }
+    /*宽度大于810px时logo样式*/
+    .pc-logo {
+        width: 270px;
+        height: 129px;
+        position: absolute;
+        left: 50%;
+        margin-left: -135px;
+        display: block;
+    }
+    .c_body_wrap {
+        position: relative;
+        top: 20px;
+        height: 191px;
+    }
+    .form1 {
+        margin-top: 22px;
+        position: relative;
+        top: 151px;
+    }
+    /*输入框样式*/
+    .textfile {
+        width: 532px;
+        height: 34px;
+        margin-left: 7px;
+        margin-top: 6px;
+        padding-left: 7px;
+        padding-bottom: 0;
+        border-width: 1px;
+        border-bottom-color: darkgray;
+        background-color: #ffffff;
+        position: relative;
+    }
+    /*百度一下的按钮的样式*/
+    .search {
+        width: 100px;
+        height: 36px;
+        padding: 0;
+        border: 0;
+        background-color: #3385ff;
+        color: white;
+        margin-left: -4px;
+        font: 15px arial;
+        border-bottom: 1px solid transparent;
+        position: relative;
+        top: 1px;
+        cursor: pointer;
+    }
+    .search:hover {
+        background-color: #317ef3;
+    }
+    /*页面尾部的样式*/
+    .pc-foot {
+        width: 100%;
+        height: 117px;
+        text-align: center;
+        font: 12px arial;
+        background-color: transparent;
+        position: absolute;
+        bottom: -5%;
+    }
+    /*尾部p标签样式*/
+    .pc-foot p {
+        margin: 16px 0 5px 0;
+    }
+    /*针对尾部p标签中第一行的样式*/
+    .pc-foot .line1 {
+        margin: 0 10px;
+        color: #00c;
+    }
+    /*针对尾部p标签中第二行的样式*/
+    .pc-foot .line2 {
+        color: #666;
+    }
+}
+
+
+/*当页面小于810px时采用的样式*/
+
+@media only screen and (max-width: 810px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .pc-logo,
+    .pc-nav,
+    .pc-foot {
+        display: none;
+    }
+    /*外部容器样式*/
+    .container {
+        background-color: #ffffff;
+    }
+    /*头部样式*/
+    .m-header {
+        box-sizing: border-box;
+        height: 48px;
+        width: 100%;
+    }
+    /*显示天气情况部分样式*/
+    .m-weather {
+        padding: 0 9px;
+    }
+    /*温度样式*/
+    .m-temperature {
+        font-size: 30px;
+        color: #818388;
+        line-height: 48px;
+        font-weight: bold;
+        display: inline-block;
+    }
+    .icon-sun {
+        color: #B7BABE;
+        font-size: 24px;
+        display: inline-block;
+        position: relative;
+        left: -25px;
+    }
+    /*所在地空气质量样式*/
+    .m-weather-status {
+        display: inline-block;
+        box-sizing: border-box;
+        height: 26px;
+    }
+    .m-weather-status p {
+        height: 13px;
+        font-size: 11px;
+        line-height: 13px;
+        color: #7e818a;
+        position: relative;
+        left: -25px;
+        /*display: inline-block;*/
+    }
+    /*温度与所在地之间竖线的样式*/
+    .line {
+        width: 0;
+        height: 26px;
+        /*background-color: orange;*/
+        border-left: 1px solid #eee;
+        display: inline-block;
+        position: relative;
+        left: -25px;
+        top: 2px;
+    }
+    /*下拉菜单的样式*/
+    .m-weather .icon-circle-down {
+        color: #B6B7BA;
+        font-size: 16px;
+        display: inline-block;
+        position: relative;
+        left: -25px;
+        top: 2px;
+    }
+    /*用户登录logo样式*/
+    .icon-user {
+        display: inline-block;
+        font-size: 28px;
+        color: #B2B4Ba;
+        padding: 7px 0 7px 7px;
+        float: right;
+    }
+    /*页面宽度小于810px时logo的样式*/
+    .mobile-logo {
+        width: 175px;
+        height: 55px;
+        position: relative;
+        left: 50%;
+        margin-left: -82.5px;
+        padding: 17px 0 15px 0;
+    }
+    /*搜索内容提交表单样式*/
+    .form1 {
+        margin: 0 10px;
+        height: 42px;
+        border-radius: 1px;
+        border: 1px solid #8d9394;
+    }
+    .form1-wrap {
+        display: -webkit-box;
+    }
+    /*页面宽度小于810时输入框样式*/
+    .textfile {
+        /*width: 100%;*/
+        /*margin-right: 89px;*/
+        box-sizing: border-box;
+        height: 42px;
+        padding: 7px 42px 7px 6px;
+        display: block;
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        border-style: none;
+    }
+    /*页面宽度小于810时百度一下按钮样式*/
+    .search {
+        width: 79px;
+        height: 42px;
+        line-height: 42px;
+        font-size: 16px;
+        font-weight: 700;
+        border-width: 0 0 0 1px;
+        border-left: 1px solid #8d9394;
+        background: -webkit-linear-gradient(top, #f9f9f9, #e7e9eb);
+    }
+    /*页面小于810时导航栏样式*/
+    .m-nav {
+        height: 43px;
+        margin: 17px 0 14px;
+        /*padding-left: 2%;*/
+        /*padding-right: 2%;*/
+    }
+    /*导航栏下a标签样式*/
+    .m-nav a {
+        float: left;
+        text-decoration: none;
+        font-size: 13px;
+        color: #262626;
+        width: 16%;
+        text-align: center;
+    }
+    /*导航栏下图标字体样式*/
+    .m-nav a i {
+        display: block;
+        margin-bottom: 4px;
+        height: 24px;
+        color: #777;
+        font-size: 24px;
+    }
+    /*导航栏第一个图标左边距为2%*/
+    .first-nav-logo {
+        margin-left: 2%;
+    }
+    /*导航栏最后一个图标右边距为2%*/
+    .last-nav-logo {
+        margin-right: 2%;
+    }
+    /*页面宽度小于810时附加功能容器*/
+    .plus-card {
+        padding: 2px 10px 10px 10px;
+        margin-bottom: 10px;
+    }
+    /*常用地址外部容器样式*/
+    .m-nav2 {
+        border: 1px solid #d9dde2;
+        margin-top: 8px;
+    }
+    /*标题栏样式容器样式*/
+    .title {
+        margin: 2px 14px 0 14px;
+        height: 40px;
+        text-align: left;
+        line-height: 40px;
+    }
+    /*地球图标样式*/
+    .icon-earth {
+        color: #6fb5e9;
+        font-size: 15px;
+    }
+    /*编辑按钮样式*/
+    .icon-list2 {
+        font-size: 15px;
+        color: #B6B7BA;
+        float: right;
+        position: relative;
+        top: 10px;
+    }
+    /*标题样式*/
+    h2 {
+        display: inline-block;
+        line-height: 40px;
+        font-size: 15px;
+        font-weight: 400;
+        color: #aaa;
+    }
+    /*导航栏2容器样式*/
+    .nav2-list {
+        font-size: 14px;
+        height: 84px;
+    }
+    /*导航栏2中a标签样式*/
+    .nav2-list a {
+        float: left;
+        display: block;
+        height: 42px;
+        line-height: 42px;
+        padding: 0 6px;
+        width: 21%;
+        text-align: center;
+        text-decoration: none;
+        color: #262626;
+        position: relative;
+    }
+    /*加号样式*/
+    .icon-plus {
+        position: relative;
+        font-size: 20px;
+        top: 10px;
+        color: #B6B7BA;
+    }
+    /*实时热点容器样式*/
+    .news {
+        border: 1px solid #d9dde2;
+        margin-top: 8px;
+    }
+    /*时事热点图标样式*/
+    .icon-file-text2 {
+        font-size: 15px;
+        color: #7db164
+    }
+    /*刷新图标样式*/
+    .icon-spinner11 {
+        float: right;
+        color: #B6B7BA;
+        position: relative;
+        top: 8px;
+        left: -20px;
+    }
+    /*刷新字体样式*/
+    .refresh {
+        color: #262626;
+        margin: 0 5px;
+    }
+    /*竖线样式*/
+    .title .line {
+        float: right;
+        position: relative;
+        left: -13px;
+    }
+    /*新闻列表样式*/
+    .news-list {
+        font-size: 14px;
+        height: 126px;
+    }
+    /*新闻列表中a标签样式*/
+    .news-list a {
+        float: left;
+        display: block;
+        height: 42px;
+        line-height: 42px;
+        width: 50%;
+        text-decoration: none;
+        text-align: left;
+        color: #262626;
+        -webkit-box-sizing: border-box;
+        padding-left: 14px;
+    }
+    /*周边服务容器样式*/
+    .service {
+        border: 1px solid #d9dde2;
+        margin-top: 8px;
+        height: 236px;
+    }
+    /*周边服务字样前图标样式*/
+    .icon-location2 {
+        font-size: 15px;
+        color: #60ade8;
+    }
+    .service-content {}
+    /*定位容器样式*/
+    .location {
+        margin: 8px 14px 14px 14px;
+        height: 30px;
+        line-height: 30px;
+        text-align: left;
+    }
+    /*定位文字样式*/
+    .location span {
+        display: inline-block;
+        font-size: 14px;
+    }
+    /*定位按钮样式*/
+    .location button {
+        position: relative;
+        float: right;
+        width: 70px;
+        height: 30px;
+        border: 1px solid #d2d6dd;
+        border-radius: 2px;
+        font-size: 14px;
+        background-color: #ffffff;
+        line-height: 30px;
+        vertical-align: middle;
+    }
+    /*定位图标样式*/
+    .icon-radio-checked {
+        font-size: 15px;
+        color: #919498;
+        position: relative;
+        left: -5px;
+    }
+    /*服务选项容器样式*/
+    .service-list {
+        font-size: 14px;
+    }
+    /*服务选项中a标签样式*/
+    .service-list a {
+        float: left;
+        display: block;
+        height: 71px;
+        line-height: 21px;
+        width: 25%;
+        text-decoration: none;
+        text-align: center;
+        -webkit-box-sizing: border-box;
+        color: #262626;
+    }
+    .circle {
+        width: 42px;
+        height: 42px;
+        border-radius: 42px;
+        text-align: center;
+        vertical-align: middle;
+        margin-left: 24px;
+    }
+    .service-list a i {
+        color: #ffffff;
+        font-size: 26px;
+        line-height: 42px;
+        text-align: center;
+        left: 1px;
+    }
+    /*以下8个样式分别对应8个服务图标背景颜色*/
+    .movie .circle {
+        background-color: #b399d1;
+    }
+    .food .circle {
+        background-color: #f09965;
+    }
+    .hotel .circle {
+        background-color: #b1cf6a;
+    }
+    .bank .circle {
+        background-color: #70d0a1;
+    }
+    .bus .circle {
+        background-color: #93a4b3;
+    }
+    .view .circle {
+        background-color: #b1cf6a;
+    }
+    .take-out .circle {
+        background-color: #f09965;
+    }
+    .groupon .circle {
+        background-color: #ea7d62;
+    }
+    /*团购图标定位*/
+    #price-tag {
+        position: relative;
+        left: -1px;
+        top: 1px;
+    }
+    /*交通路况容器样式*/
+    .traffic-status {
+        border: 1px solid #d9dde2;
+        margin-top: 8px;
+    }
+    /*路况文字前图标样式*/
+    .icon-road {
+        font-size: 15px;
+        color: #7db164;
+    }
+    /*添加地址容器样式*/
+    .add {
+        height: 70px;
+        text-align: center;
+        vertical-align: middle;
+        padding: 12px 8px 8px 8px;
+    }
+    /*添加地址字样样式*/
+    .add-address {
+        color: #0058d2;
+        font-size: 15px;
+        margin-bottom: 10px;
+        line-height: 15px;
+    }
+    /*管理首页容器样式*/
+    .admin {
+        border: 1px solid #d9dde2;
+        margin-top: 8px;
+        height: 45px;
+        line-height: 45px;
+    }
+    /*管理首页下a标签的样式*/
+    .admin a {
+        display: block;
+        text-align: center;
+        font-size: 15px;
+        text-decoration: none;
+        color: #0058d2;
+    }
+    /*管理首页前图标样式*/
+    .icon-cog {
+        color: #0058d2;
+    }
+    /*页面宽度小于810时尾部样式*/
+    .m-foot {
+        margin: 20px 25px 0 25px;
+    }
+    /*极速版按钮样式*/
+    .topspeed-version {
+        display: inline-block;
+        border: 1px solid #ececec;
+        height: 24px;
+        width: 47%;
+        line-height: 24px;
+        text-align: center;
+        font-size: 13px;
+        color: #555;
+        border-radius: 1px;
+        background-color: #ffffff;
+    }
+    /*用户反馈按钮样式*/
+    .feedback {
+        display: inline-block;
+        border: 1px solid #ececec;
+        height: 24px;
+        width: 47%;
+        line-height: 24px;
+        text-align: center;
+        font-size: 13px;
+        color: #555;
+        border-radius: 1px;
+        background-color: #ffffff;
+    }
+    /*页面尾部a标签样式*/
+    .m-foot a {
+        display: block;
+        font-size: 10px;
+        padding: 15px 0 13px 0;
+        color: #aaa;
+        line-height: 10px;
+        text-align: center;
+        text-decoration: none;
+    }
+}

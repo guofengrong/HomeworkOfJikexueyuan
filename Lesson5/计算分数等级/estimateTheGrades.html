@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh" xml:lang="zh" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta content="text/html" charset="UTF-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>javascript第一周第一个作业</title>
+    <script type="text/javascript">
+        var x;
+        var y;
+        var theClass;
+        function estimate(x) {
+            if (x <= 100 && x >= 90) {
+                y = 1;
+                alert("该学生成绩为一等");
+            } else if (x < 90 && x >= 80) {
+                y = 2;
+                alert("该学生成绩为二等");
+            } else if (x < 80 && x >= 70) {
+                y = 3;
+                alert("该学生成绩为三等");
+            } else if (x < 70 && x >= 60) {
+                y = 4;
+                alert("该学生成绩为四等");
+            } else if (x < 60 && x >= 50) {
+                y = 5;
+                alert("该学生成绩为五");
+            } else if (x < 50 && x >= 40) {
+                y = 6;
+                alert("该学生成绩为六等");
+            } else if (x < 40 && x >= 30) {
+                y = 7;
+                alert("该学生成绩为七等");
+            } else if (x < 30 && x >= 20) {
+                y = 8;
+                alert("该学生成绩为八等");
+            } else if (x < 20 && x >= 10) {
+                y = 9;
+                alert("该学生成绩为九等");
+            } else if (x < 10 && x >= 0) {
+                y = 10;
+                alert("该学生成绩为十等");
+            } else if (x === undefined) {
+                alert("请输入成绩");
+            } else {
+                alert("输入成绩有误");
+            }
+            return y;
+        }
+        theClass = estimate(x);
+        console.log(x);
+        console.log(theClass);
+    </script>
+</head>
+
+<body>
+    <input type="text" id="x" name="x" value="0" /> 
+    <button type="button" onclick="javascript:estimate(document.getElementById('x').value);" >我几等？</button>
+</body>
+
+</html>

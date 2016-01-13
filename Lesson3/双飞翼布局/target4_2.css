@@ -1,0 +1,58 @@
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /*页面头部样式*/
+        
+        .head {
+            background-color: #ffa500;
+            height: 150px;
+        }
+        /*页面主体样式*/
+        
+        .article {
+            background-color: #d2691e;
+            height: 300px;
+            /*padding-left: 150px;*/
+            /*padding-right: 100px;*/
+        }
+        /*主体中间部分内部div样式*/
+        
+        .inner {
+            margin-left: 150px;
+            margin-right: 100px;
+        }
+        /*主体部分左侧样式*/
+        
+        .article .left {
+            background-color: #0000ff;
+            float: left;
+            width: 150px;
+            height: 16px;
+            margin-left: -100%;
+            /*position: relative;*/
+            /*left: -150px;*/
+        }
+        /*主体部分右侧样式*/
+        
+        .article .right {
+            background-color: #6495ed;
+            float: left;
+            width: 100px;
+            height: 16px;
+            margin-left: -100px;
+            /*position: relative;*/
+            /*right:-100px;*/
+        }
+        /*主体部分中间样式*/
+        
+        .article .middle {
+            background-color: #5f9ea0;
+            float: left;
+            width: 100%;
+        }
+        
+        .footer {
+            background-color: #deb887;
+            height: 100px;
+        }

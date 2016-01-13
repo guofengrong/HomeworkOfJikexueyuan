@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh" xml:lang="zh" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta content="text/html" charset="UTF-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>百度新闻</title>
+    <link rel="stylesheet" type="text/css" href="./css/bd-news.css">
+    <link rel="stylesheet" type="text/css" href="./css/icomoon/style.css">
+    <script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+    <!-- 最外层包裹 -->
+    <div class="container">
+        <!--页面头部-->
+        <div class="header-wrapepr">
+            <div class="header">
+                <div class="tool-bar-l">
+                    <a class="a-bd" href="https://m.baidu.com/"></a>
+                    <a class="toolbar-btn" href="#">
+                        <i class="icon-user"></i>
+                    </a>
+                </div>
+                <div class="tool-bar-r">
+                    <a class="toolbar-btn" href="">
+                        <i class="icon-search"></i>
+                    </a>
+                    <a class="toolbar-btn" href="#">
+                        <i class="icon-plus"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 页面新闻导航条 -->
+        <div class="line1"></div>
+        <div class="nav-wrapper">
+            <div class="nav">
+                <ul class="nav-ul">
+                    <li class="nav-li">
+                        <a class="btn-recommendation" href="#">推荐</a>
+                        <span class="line3" id="rec-line3"></span>
+                        <span class="line2"></span>
+                    </li>
+                    <li class="nav-li">
+                        <a class="btn-local" href="#">本地</a>
+                        <span class="line3" id="local-line3"></span>
+                        <span class="line2"></span>
+                    </li>
+                    <li class="nav-li">
+                        <a class="btn-entertainment" href="#">娱乐</a>
+                        <span class="line3" id="entertainment-line3"></span>
+                        <span class="line2"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 页面主体部分，展示新闻图片轮播、新闻列表 -->
+        <div class="main-sections-wrapper">
+            <!-- 新闻轮播 -->
+            <div class="img-tab-wrapper">
+                <div class="rec-img-tab">
+                    <div class="img-tab">
+                        <a href="#">
+                            <img src="./img/recommendation/1.jpeg" alt="news-img">
+                            <span class="img-info">郑州"最烂"上学路遭家长吐槽</span>
+                        </a>
+                        <a href="#">
+                            <img src="./img/recommendation/2.jpeg" alt="news-img">
+                            <span class="img-info">湖南衡阳水葫芦泛滥现”绿草带“</span>
+                        </a>
+                        <a href="#">
+                            <img src="./img/recommendation/3.jpeg" alt="news-img">
+                            <span class="img-info">金正恩亲自为朝军元帅安排葬礼</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="local-img-tab">
+                    <div class="img-tab">
+                        <a href="#">
+                            <img src="./img/local/2.jpg" alt="news-img">
+                            <span class="img-info">北京"雨雪模式"持续4天 周末迎来暴雪(图)</span>
+                        </a>
+                        <a href="#">
+                            <img src="./img/local/3.jpg" alt="news-img">
+                            <span class="img-info">北京11月周末大雪降温历史罕见 对我们有何影响？</span>
+                        </a>
+                        <a href="#">
+                            <img src="./img/local/4.jpg" alt="news-img">
+                            <span class="img-info">北京14条山区公交线路因降雪停驶</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="entertainment-img-tab">
+                    <div class="img-tab">
+                        <a href="#">
+                            <img src="./img/entertainment/1.jpg" alt="news-img">
+                            <span class="img-info">汪涵全家福！小沐沐眼大可爱</span>
+                        </a>
+                        <a href="#">
+                            <img src="./img/entertainment/2.jpg" alt="news-img">
+                            <span class="img-info">胡歌回应霍建华：五年后我未必还是单身</span>
+                        </a>
+                        <a href="#">
+                            <img src="./img/entertainment/3.jpg" alt="news-img">
+                            <span class="img-info">喻虹渊看周渝民NG影片娇喊：帅气周仔仔</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 展示新闻列表，可以插入php输出的html标签 -->
+            <div class="news-list">
+            </div>
+            <!-- 加载更多新闻按钮，但是该功能并没有写出来。。。 -->
+            <div class="refresh-wrapper">
+                <button id="rec-refresh" class="btn-refresh">点击加载更多</button>
+                <button id="local-refresh" class="btn-refresh">点击加载更多</button>
+                <button id="entertainment-refresh" class="btn-refresh">点击加载更多</button>
+            </div>
+            <!-- 页面尾部 -->
+            <div class="footer-wrapper">
+                <div class="footer">
+                    <div class="footer-item">
+                        <i class="icon-mail"></i> 意见反馈
+                    </div>
+                    <div class="footer-item">
+                        <i class="icon-dropbox"></i>
+                        <span class="line4"></span> 应用推荐
+                    </div>
+                    <div class="footer-item">
+                        <i class="icon-download3"></i>
+                        <span class="line4"></span> 客户端
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/sea.js"></script>
+    <script type="text/javascript">
+    // seajs 的简单配置
+    seajs.config({
+        base: "./js/",
+        alias: {
+            "jquery": "jquery-1.11.3.min"
+        }
+    });
+
+    // 加载入口模块
+    seajs.use("main");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+edtiNews.php和inqueryNews.php是用于后台操作界面，中增加及查询新闻的php脚本；
+showNews.php是用于bd_news实现新闻加载的php脚本；
+newslist是已经导出好的存放了部分新闻信息的数据库表单；
+其他注释见程序文件。

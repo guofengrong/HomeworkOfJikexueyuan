@@ -1,0 +1,108 @@
+/*.partner、.university、.media用于设置战略合作伙伴、合作院校、媒体报道的样式*/
+
+$niceGreen: #35b558;
+$normalColor: #e4e4e4;
+@mixin boxSize($boxWidth,$boxHeight) {
+    width: $boxWidth;
+    height: $boxHeight;
+}
+
+.partner-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.partner {
+    position: relative;
+    @include boxSize(960px,48px);
+    padding: 20px;
+    border: 1px solid #e4e4e4;
+}
+
+.partner-swiper-container {
+    position: relative;
+    @include boxSize(950px,50px);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.partner-box {
+    position: absolute;
+    height: 50px;
+    a {
+        display: inline-block;
+        width: 150px;
+        margin-right: 5px;
+        cursor: pointer;
+        img {
+            @include boxSize(148px,48px);
+            border: 1px solid $normalColor;
+        }
+    }
+}
+
+.university-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.university {
+    position: relative;
+    @include boxSize(958px,110px);
+    padding: 20px;
+    border: 1px solid $normalColor;
+}
+
+.university-swiper-container {
+    position: relative;
+    @include boxSize(958px,110px);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.university-box {
+    position: absolute;
+    height: 110px;
+    a {
+        cursor: pointer;
+        img {
+            @include boxSize(110px,110px);
+            margin-right: 25px;
+        }
+    }
+}
+
+.media-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.media {
+    position: relative;
+    width: 958px;
+    height: 50px;
+    padding: 20px;
+    border: 1px solid #e4e4e4;
+}
+
+.media-swiper-container {
+    position: relative;
+    @include boxSize(958px,50px);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.media-box {
+    position: absolute;
+    height: 50px;
+    a {
+        cursor: pointer;
+        img {
+            @include boxSize(148px,48px);
+            border: 1px solid $normalColor;
+            margin-right: 10px;
+        }
+    }
+}
