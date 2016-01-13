@@ -16,8 +16,15 @@
   <li>Lesson10:掌握前端工业化框架</li>
   <li>Lesson11:掌握CSS在工程中的变化</li>
   <li>Lesson12:掌握JavaScript常用设计模式</li>
-  <li>未完待续</li>
-  <li>未完待续</li>
-  <li>未完待续</li>
-  <li>未完待续</li>
+  <li>Lesson:13:to be continued</li>
+  <li>Lesson:14:to be continued</li>
+  <li>Lesson:15:to be continued</li>
+  <li>Lesson:16:to be continued</li>
 </ul>
+
+<h4>Change log</h4>
+<ul>
+  <li>2016.1.14:上传1-12课的作业</li>
+</ul>
+
+<p> Email:18859109581@139.com </P>
